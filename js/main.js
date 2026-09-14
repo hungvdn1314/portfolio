@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Language
   setLanguage(currentLang);
   const langToggleBtn = document.getElementById('lang-toggle');
@@ -43,7 +43,7 @@
       const sectionHeight = current.offsetHeight;
       const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute('id');
-      const navItem = document.querySelector(.nav-links a[href*=]);
+      const navItem = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
 
       if (navItem) {
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -64,10 +64,10 @@
       const email = document.getElementById('sender-email').value;
       const message = document.getElementById('sender-message').value;
 
-      const subject = encodeURIComponent(Portfolio Inquiry from );
-      const body = encodeURIComponent(Name: \nEmail: \n\nMessage:\n);
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
 
-      window.location.href = mailto:dsc.hungvdn@gmail.com?subject=&body=;
+      window.location.href = `mailto:dsc.hungvdn@gmail.com?subject=${subject}&body=${body}`;
     });
   }
 
