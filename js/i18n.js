@@ -51,6 +51,7 @@ const translations = {
       sideTitle: 'Studio Platforms & Web Tools',
       sideDesc: 'Interactive tournament portals and real-time platforms built for Gear Games.',
       viewSource: 'Live App',
+      viewRepo: 'Source Code',
       articleReview: 'News & Coverage',
       officialSite: 'Official Site',
 
@@ -234,6 +235,7 @@ const translations = {
       sideTitle: 'Hệ Thống Web & Nền Tảng Studio',
       sideDesc: 'Các cổng thông tin giải đấu và ứng dụng tương tác thời gian thực xây dựng cho Gear Games.',
       viewSource: 'Trực Tiếp',
+      viewRepo: 'Mã Nguồn GitHub',
       articleReview: 'Báo Chí & Đánh Giá',
       officialSite: 'Trang Chủ',
 
@@ -380,7 +382,12 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     const value = getNestedTranslation(t, key);
     if (value !== undefined) {
-      el.innerHTML = value;
+      const innerSpan = el.querySelector(':scope > span');
+      if (innerSpan && el.querySelector(':scope > svg')) {
+        innerSpan.innerHTML = value;
+      } else {
+        el.innerHTML = value;
+      }
     }
   });
 

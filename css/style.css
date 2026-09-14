@@ -606,9 +606,18 @@ body {
 .project-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
+  flex-wrap: wrap;
   padding-top: 1rem;
   border-top: 1px solid var(--border-subtle);
+}
+
+.footer-repo-link {
+  transition: var(--transition-fast);
+}
+
+.footer-repo-link:hover {
+  color: var(--sky-accent) !important;
 }
 
 .project-link-btn {
