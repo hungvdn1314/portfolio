@@ -1,412 +1,404 @@
-const translations = {
-  en: {
-    nav: {
-      projects: 'Projects',
-      competencies: 'Competencies',
-      experience: 'Experience',
-      about: 'About',
-      contact: 'Contact',
-      cv: 'Download CV'
+/**
+ * IrrationaL Portfolio - Comprehensive English / Vietnamese i18n Engine
+ */
+
+(function () {
+  'use strict';
+
+  const translations = {
+    en: {
+      nav: {
+        projects: "Projects",
+        competencies: "Competencies",
+        experience: "Experience",
+        about: "About",
+        contact: "Contact",
+        cv: "Download CV"
+      },
+      hero: {
+        status: "AVAILABLE FOR PRODUCTION CLIENT & INFRA ROLES",
+        intro: "Hi, I'm",
+        title: "IrrationaL",
+        realname: "Vu Dinh Nghia Hung",
+        role: "GAME CLIENT & INFRA ENGINEER",
+        summary: "Architecting deterministic multiplayer combat, responsive gameplay mechanics, and production-grade client infrastructure. 4+ years of hands-on game engineering at Gear Games.",
+        exploreWork: "Explore Featured Work",
+        downloadCv: "Download CV",
+        getInTouch: "Get in Touch",
+        location: "Da Nang, Vietnam",
+        experiencePill: "4+ Years at Gear Games",
+        focusPill: "Unity & Deterministic Netcode"
+      },
+      projects: {
+        tag: "PORTFOLIO",
+        title: "Featured Projects",
+        desc: "Commercial releases, deterministic multiplayer prototypes, and studio engineering platforms.",
+        shippedLabel: "COMMERCIAL & LIVE TITLES",
+        prototypesLabel: "GAMEPLAY LABS & CAPSTONE SYSTEMS",
+        platformsLabel: "STUDIO PLATFORMS & TOOLS",
+        
+        // Puzzle Strike
+        p1Role: "Client Engineer (Gameplay & Combat Systems)",
+        p1Title: "Puzzle Strike: Combat RPG",
+        p1Desc: "<strong>Phase 1 (Multiplayer Prototype):</strong> Engineered weapon ballistics, hero skills, and combat simulation on top of Photon Quantum deterministic netcode.<br/><strong>Phase 2 (Commercial Release):</strong> Pivoted into a turn-based Combat RPG. Owned core match-3 grid algorithms, cascading solvers, turn damage math, 3D character animation timelines, and mobile UGUI.",
+        watchTrailer: "Watch Gameplay Trailer",
+        newsCoverage: "Press Review (AFKmobi)",
+
+        // POP! Slots
+        p2Role: "Outsource Client & SDK Infrastructure Support",
+        p2Title: "POP! Slots (playSTUDIOS)",
+        p2Desc: "Supported client engineering for playSTUDIOS' global top-grossing casino title. Maintained core client subsystems, resolved native bridge crashes (IAP, Firebase, Facebook SDKs), and profiled memory allocations and GPU draw call budgets using Splunk and Unity Profiler.",
+        officialSite: "Official Title Site",
+
+        // Secondary Cards
+        p3Role: "Prototype",
+        p3Title: "Custom Car Racing 3D",
+        p3Desc: "Unreleased mobile 3D racing prototype. Architected an extensible animation timeline framework for modular vehicle customization, dynamic parts swapping, and mobile shader draw call optimization.",
+
+        p4Role: "Prototype",
+        p4Title: "Idle Combat & Obstacle Arena",
+        p4Desc: "Internal gameplay prototype fusing automated idle battle mechanics with moving obstacle hazards. Built obstacle spatial triggers, character FSM AI, modular gear stats, and hit-stop camera VFX.",
+
+        p5Role: "Capstone Thesis",
+        p5Title: "Final Fantasy-Style 2D RPG",
+        p5Desc: "Engineered 100% solo as both University Graduation Thesis and 6-month Internship Capstone at Gear Inc. Implemented tilemaps, 4 playable heroes, turn-based battle math, and full save/load data serialization.",
+
+        p6Role: "Web Platform",
+        p6Title: "Gear Games LoL Championship",
+        p6Desc: "Interactive company tournament portal featuring real-time bracket propagation, automated group standings, match scheduling, and interactive Poro Easter eggs.",
+        liveDemo: "Live App",
+        sourceCode: "Source",
+
+        p7Role: "Web Platform",
+        p7Title: "Badminton Tournament 2026",
+        p7Desc: "Official tournament portal for studio championship with live court scoring, BWF rules integration, and doubles service rotation tracking.",
+
+        p8Role: "Interactive Web",
+        p8Title: "Velvet Vines",
+        p8Desc: "Sleek, responsive party game and card-drinking web application designed for social gatherings with fluid micro-animations."
+      },
+      skills: {
+        tag: "ENGINEERING FOCUS",
+        title: "Core Competencies",
+        desc: "Specialized disciplines spanning deterministic networking, core gameplay mechanics, memory profiling, and native platform integration.",
+        comp1Title: "Gameplay Architecture & Combat Systems",
+        comp1Desc: "Turn-based damage formulas, finite state machines, algorithmic match-3 solvers, animation timeline choreographies, input buffering, and modular gear stat progression.",
+        comp2Title: "Deterministic Multiplayer & Engine Tech",
+        comp2Desc: "Tick-based lockstep simulation, deterministic physics concepts, Photon Quantum rollback prototype integration, and memory-conscious component lifecycles in Unity 2D/3D.",
+        comp3Title: "Engine Profiling & Performance",
+        comp3Desc: "Diagnosing CPU/GPU bottlenecks with Unity Memory Profiler and Frame Debugger, GPU draw call batching, dynamic UGUI canvas isolation, and Addressables memory management.",
+        comp4Title: "Platform Infrastructure & Native SDKs",
+        comp4Desc: "Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry query filtering, macOS LiveOps desktop tools (Swift, Python), and fullstack web tools (Next.js)."
+      },
+      experience: {
+        tag: "CAREER PATH",
+        title: "Experience & Milestones",
+        desc: "4+ years of studio production, native infrastructure triage, and engineering leadership.",
+        toggleEarly: "View Academic & Early Milestones (2015 — 2021)",
+        hideEarly: "Hide Academic & Early Milestones",
+
+        job1Date: "Nov 2024 — Present",
+        job1Role: "Infra Engineer",
+        job1Company: "Gear Games · Da Nang, Vietnam",
+        job1Bullets: [
+          "Diagnosed and resolved critical third-party SDK defects across In-App Purchases (IAP), Firebase, and Facebook SDK.",
+          "Filtered production crash signatures, telemetry, and distributed logs using Splunk queries to isolate root causes.",
+          "Maintained and developed macOS internal tools for Live Ops using Xcode, Swift, and Python; accelerated velocity with AI-augmented workflows."
+        ],
+
+        job2Date: "Mar 2024 — Nov 2024",
+        job2Role: "Client Engineer — Custom Car Racing",
+        job2Company: "Gear Games · Da Nang, Vietnam",
+        job2Bullets: [
+          "Architected an extensible animation timeline framework for dynamic 3D vehicle customization and parts swapping.",
+          "Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.",
+          "Translated complex GDD mechanics into decoupled, testable gameplay modules."
+        ],
+
+        job3Date: "Aug 2023 — Mar 2024",
+        job3Role: "Client Engineer — Idle Combat & Obstacles",
+        job3Company: "Gear Games · Da Nang, Vietnam",
+        job3Bullets: [
+          "Engineered physics interactions, trigger logic, and spatial hazards for moving obstacle courses.",
+          "Implemented autonomous character combat state machines, auto-attack sequencing, and modular gear stat progression.",
+          "Integrated combat feedback VFX (hit impacts, camera shakes) and responsive mobile HUD interfaces."
+        ],
+
+        job4Date: "Nov 2021 — Aug 2023",
+        job4Role: "Client Engineer — Survival Prototype & Puzzle Strike",
+        job4Company: "Gear Games · Da Nang, Vietnam",
+        job4Bullets: [
+          "Phase 1 (Prototype): Implemented weapon ballistic mechanics, character skills, and combat hooks interacting with Photon Quantum.",
+          "Phase 2 (Released Title): Engineered core match-3 grid solver algorithms, cascading logic, and full turn-based combat damage/mana progression.",
+          "Integrated artist 3D character models into Unity, authored timeline choreography for skills and movements, and built responsive in-game UI/UX."
+        ],
+
+        // Compact Milestones
+        m1Date: "Apr 2021 — Nov 2021",
+        m1Title: "Client Engineer Intern @ Gear Inc",
+        m1Desc: "Built a Final Fantasy-style 2D RPG 100% solo as both Graduation Thesis and Internship Capstone (combat, tilemaps, save/load data serialization).",
+
+        m2Date: "2020",
+        m2Title: "Backend Developer Intern @ Enouvo IT Solutions",
+        m2Desc: "Collaborated under senior guidance to run API test suites using Postman and troubleshoot Node.js backend services.",
+
+        m3Date: "2018 — 2022",
+        m3Title: "B.S. in Computing @ University of Greenwich Vietnam",
+        m3Desc: "Selected as one of the first 9 Google Developer Student Club (DSC) Leads across Vietnam. Represented Vietnam at Google DSC SEA Summit 2019 in Malaysia.",
+
+        m4Date: "2015 — 2018",
+        m4Title: "Specialized in Informatics @ Le Quy Don High School for the Gifted",
+        m4Desc: "National Science & Tech Award for IoT Early Warning System. Researched traffic density computer vision with OpenCV."
+      },
+      about: {
+        tag: "PROFILE",
+        title: "About Me",
+        photoTag: "Vu Dinh Nghia Hung // IrrationaL",
+        photoRole: "Game Client & Infra Engineer",
+        lead: "Game Client & Infra Engineer with 4+ years of production experience bridging core gameplay mechanics, deterministic multiplayer logic, and production SDK stability.",
+        p1: "Over 4+ years at Gear Games, I served as both a Client Engineer and an Infra Engineer. My work spanned the full spectrum of game production: from architecting core combat algorithms, vehicle customization timelines, and obstacle hazard courses, to diagnosing deep native iOS/Android SDK defects (IAP, Firebase, Facebook SDK) and production telemetry in Splunk.",
+        p2: "Earlier in my career, I was handpicked as one of the first 9 inaugural Google Developer Student Club (DSC) Leads in Vietnam, attending the 2019 Malaysia Summit. I hold a B.S. in Computing from the University of Greenwich Vietnam and graduated from the Informatics specialized class at Le Quy Don High School for the Gifted."
+      },
+      contact: {
+        tag: "GET IN TOUCH",
+        title: "Let's Build Something Exceptional",
+        desc: "Looking for an experienced Unity engineer to architect gameplay systems, solve deterministic multiplayer netcode, or optimize production client infrastructure? Let's talk.",
+        composeEmail: "Transmit Direct Email",
+        discordCopy: "Discord: _irrational_",
+        copiedToast: "Copied Discord ID to clipboard!"
+      },
+      footer: {
+        rights: "All rights reserved.",
+        designedBy: "Engineered by IrrationaL (Vu Dinh Nghia Hung)",
+        sourceCode: "View Source on GitHub"
+      }
     },
-    hero: {
-      status: 'AVAILABLE FOR CLIENT & INFRA ROLES',
-      greeting: "Hi, I'm",
-      title: 'IrrationaL',
-      subtitle: 'Vu Dinh Nghia Hung',
-      role: 'GAME CLIENT & INFRA ENGINEER',
-      bio: 'Architecting deterministic multiplayer combat, responsive gameplay systems, and production engine infrastructure. 4+ years of hands-on production experience at Gear Games.',
-      viewWork: 'View Projects',
-      hireMe: "Let's Connect",
-      downloadCv: 'Download CV',
-      location: 'Da Nang, Vietnam',
-      experiencePill: '4+ Years at Gear Games',
-      shippedPill: 'Client & Infra Engineering'
-    },
-    about: {
-      tag: 'ENGINEERING PROFILE',
-      title: 'About Me',
-      lead: 'Game Client & Infra Engineer with 4+ years of production experience bridging core gameplay mechanics, deterministic multiplayer logic, and production SDK stability.',
-      p1: 'Over 4+ years at Gear Games, I served as both a Client Engineer and an Infra Engineer. My work spanned the full spectrum of game production: from architecting core combat algorithms, vehicle customization timelines, and obstacle hazard courses, to diagnosing deep native iOS/Android SDK defects (IAP, Firebase, Facebook SDK) and production telemetry in Splunk.',
-      p2: 'Earlier in my career, I was handpicked as one of the first 9 inaugural Google Developer Student Club (DSC) Leads in Vietnam, attending the 2019 Malaysia Summit. I hold a B.S. in Computing from the University of Greenwich Vietnam and graduated from the Informatics specialized class at Le Quy Don High School for the Gifted.',
-      profileCardTitle: 'Technical Profile',
-      specRoleLabel: 'Role',
-      specRoleVal: 'Game Client & Infra Engineer',
-      specExpLabel: 'Experience',
-      specExpVal: '4+ Years (Gear Games)',
-      specFocusLabel: 'Core Focus',
-      specFocusVal: 'Gameplay Systems, Deterministic Netcode, Native SDKs',
-      specStatusLabel: 'Current Status',
-      specStatusVal: 'Open to New Opportunities',
-      specEduLabel: 'Education',
-      specEduVal: 'B.S. Computing · Greenwich Vietnam'
-    },
-    projects: {
-      tag: 'PORTFOLIO',
-      title: 'Featured Projects',
-      desc: 'Commercial titles, gameplay prototypes, and studio engineering platforms.',
-      shippedTitle: 'Commercial & Live Titles',
-      shippedDesc: 'Production releases, core gameplay systems, and live outsource engine support.',
-      capstoneTitle: 'Prototypes & Gameplay Labs',
-      capstoneDesc: 'Architectural prototypes, physics interactions, and solo capstone systems.',
-      sideTitle: 'Studio Platforms & Web Tools',
-      sideDesc: 'Interactive tournament portals and real-time platforms built for Gear Games.',
-      viewSource: 'Live App',
-      viewRepo: 'Source Code',
-      articleReview: 'News & Coverage',
-      officialSite: 'Official Site',
+    vi: {
+      nav: {
+        projects: "Dự Án",
+        competencies: "Năng Lực",
+        experience: "Kinh Nghiệm",
+        about: "Giới Thiệu",
+        contact: "Liên Hệ",
+        cv: "Tải CV"
+      },
+      hero: {
+        status: "SẴN SÀNG CHO CÁC VỊ TRÍ GAME CLIENT & INFRA",
+        intro: "Xin chào, tôi là",
+        title: "IrrationaL",
+        realname: "Vũ Đình Nghĩa Hưng",
+        role: "KỸ SƯ GAME CLIENT & HẠ TẦNG KỸ THUẬT",
+        summary: "Thiết kế kiến trúc hệ thống chiến đấu multiplayer đồng bộ (deterministic), cơ chế gameplay mượt mà và hạ tầng engine ổn định. Hơn 4 năm kinh nghiệm phát triển game thực chiến tại Gear Games.",
+        exploreWork: "Khám Phá Dự Án",
+        downloadCv: "Tải CV PDF",
+        getInTouch: "Kết Nối Ngay",
+        location: "Đà Nẵng, Việt Nam",
+        experiencePill: "4+ Năm tại Gear Games",
+        focusPill: "Chuyên sâu Unity & Deterministic Netcode"
+      },
+      projects: {
+        tag: "DANH MỤC DỰ ÁN",
+        title: "Dự Án Tiêu Biểu",
+        desc: "Các tựa game thương mại đã phát hành, nguyên mẫu multiplayer đồng bộ và nền tảng hỗ trợ studio.",
+        shippedLabel: "GAME THƯƠNG MẠI & LIVE-OPS",
+        prototypesLabel: "NGUYÊN MẪU GAMEPLAY & ĐỒ ÁN TỐT NGHIỆP",
+        platformsLabel: "NỀN TẢNG WEB & CÔNG CỤ NỘI BỘ",
 
-      gameP1Title: 'Puzzle Strike: Combat RPG',
-      gameP1Role: 'Client Engineer (Gameplay & Combat Systems)',
-      gameP1Desc: '<strong>Phase 1 (Multiplayer Prototype):</strong> Engineered weapon mechanics, hero skills, and combat simulation interacting with Photon Quantum.<br/><strong>Phase 2 (Production Release):</strong> Pivoted to a turn-based Combat RPG. Owned core match-3 grid algorithms, turn-based combat math, 3D character animation timeline integration, and responsive mobile HUD.',
+        p1Role: "Kỹ Sư Client (Gameplay & Hệ Thống Chiến Đấu)",
+        p1Title: "Puzzle Strike: Combat RPG",
+        p1Desc: "<strong>Giai đoạn 1 (Nguyên mẫu Multiplayer):</strong> Lập trình đường đạn vũ khí, kỹ năng tướng và mô phỏng chiến đấu tương tác với netcode đồng bộ Photon Quantum.<br/><strong>Giai đoạn 2 (Phát hành Thương mại):</strong> Chuyển hướng sang Combat RPG theo lượt. Chịu trách nhiệm thuật toán bàn cờ match-3, giải thuật dây chuyền (cascading), tính toán sát thương, timeline diễn hoạt nhân vật 3D và giao diện mobile UGUI.",
+        watchTrailer: "Xem Trailer Gameplay",
+        newsCoverage: "Báo chí đưa tin (AFKmobi)",
 
-      gameP2Title: 'POP! Slots (playSTUDIOS)',
-      gameP2Role: 'Outsource Client & SDK Infrastructure Support',
-      gameP2Desc: 'Assisted outsource client engineering for playSTUDIOS\' global hit. Maintained core client subsystems, patched native bridge plugins, triaged native iOS/Android crashes across IAP, Firebase, and Facebook SDKs, and performed memory/draw call profiling.',
+        p2Role: "Hỗ Trợ Kỹ Thuật Outsource Client & Native SDKs",
+        p2Title: "POP! Slots (playSTUDIOS)",
+        p2Desc: "Hỗ trợ kỹ thuật client cho tựa game casino hàng đầu thế giới của playSTUDIOS. Bảo trì hệ thống con client, khắc phục lỗi crash cầu nối native (IAP, Firebase, Facebook SDKs), phân tích cấp phát bộ nhớ và tối ưu ngân sách draw calls bằng Splunk và Unity Profiler.",
+        officialSite: "Trang Web Chính Thức",
 
-      gameP3Title: 'Custom Car Racing 3D',
-      gameP3Role: 'Client Engineer (Timeline & Customization Prototype)',
-      gameP3Desc: 'Unreleased mobile 3D racing prototype. Architected modular vehicle customization timeline framework, parts swapping logic, visual feedback loops, and optimized mobile draw call budgets.',
+        p3Role: "Nguyên mẫu",
+        p3Title: "Custom Car Racing 3D",
+        p3Desc: "Nguyên mẫu game đua xe 3D di động. Xây dựng khung timeline diễn hoạt cho hệ thống tùy biến xe cộ, thay thế phụ tùng linh hoạt và tối ưu hóa shader draw calls trên phần cứng di động.",
 
-      gameP4Title: 'Idle Combat & Obstacle Battleground',
-      gameP4Role: 'Client Engineer (End-to-End Prototype)',
-      gameP4Desc: 'Internal prototype fusing automated idle battle mechanics with dynamic obstacle traversal and battleground arenas. Built obstacle hazard logic, character combat AI state machines, modular gear progression, hit-stop VFX, and mobile HUD.',
+        p4Role: "Nguyên mẫu",
+        p4Title: "Idle Combat & Obstacle Arena",
+        p4Desc: "Nguyên mẫu gameplay nội bộ kết hợp cơ chế chiến đấu tự động với vượt chướng ngại vật di động. Xây dựng bộ kích hoạt không gian, AI máy trạng thái (FSM) nhân vật, trang bị module và hiệu ứng rung camera hit-stop.",
 
-      gameP5Title: 'Final Fantasy-Inspired 2D RPG',
-      gameP5Role: 'Solo Architect & Developer (Graduation Capstone)',
-      gameP5Desc: 'Engineered 100% solo as both University Graduation Thesis and 6-month Internship Capstone at Gear Inc. Sourced sprite/audio assets, designed tilemaps, coded 4 playable heroes, turn-based battle math, and player account save/load data serialization.',
+        p5Role: "Đồ án Tốt nghiệp",
+        p5Title: "Final Fantasy-Style 2D RPG",
+        p5Desc: "Lập trình 100% độc lập cho Đồ án Tốt nghiệp Đại học và Đồ án Thực tập 6 tháng tại Gear Inc. Thiết kế tilemap, 4 lớp nhân vật điều khiển được, toán chiến đấu theo lượt và tuần tự hóa lưu trữ dữ liệu người chơi.",
 
-      webP1Title: 'Gear Games LoL Tournament',
-      webP1Role: 'Full-stack Tournament Hub',
-      webP1Desc: 'Interactive company League of Legends championship portal with live brackets, automated group standings, match scheduling, and custom ARAM Poro Easter eggs. Built with Next.js.',
+        p6Role: "Nền tảng Web",
+        p6Title: "Giải Đấu LMHT Gear Games",
+        p6Desc: "Cổng thông tin giải đấu nội bộ công ty với tính năng cập nhật nhánh đấu thời gian thực, tự động xếp hạng bảng đấu, lịch thi đấu và hiệu ứng Poro thú vị.",
+        liveDemo: "Ứng Dụng Trực Tiếp",
+        sourceCode: "Mã Nguồn",
 
-      webP2Title: 'Gear Games Badminton 2026',
-      webP2Role: 'Real-time Arena Portal',
-      webP2Desc: 'Official tournament portal for internal badminton championship with real-time scoring, bracket propagation, BWF rules integration, and doubles service rotation assistant.',
+        p7Role: "Nền tảng Web",
+        p7Title: "Giải Cầu Lông Gear Games 2026",
+        p7Desc: "Cổng thông tin chính thức cho giải vô địch cầu lông nội bộ với chấm điểm sân đấu trực tiếp, tích hợp luật BWF và hỗ trợ xoay vòng giao cầu đôi.",
 
-      webP3Title: 'Velvet Vines',
-      webP3Role: 'Interactive Web Experience',
-      webP3Desc: 'Sleek, responsive party game and card-drinking web application designed for social gatherings with fluid micro-animations.'
-    },
-    skills: {
-      tag: 'CORE COMPETENCIES',
-      title: 'Engineering Focus',
-      desc: 'Specialized disciplines across gameplay mechanics, deterministic networking, engine profiling, and native infrastructure.',
-      comp1Title: 'Gameplay Systems & Math',
-      comp1Desc: 'Turn-based combat formulas, finite state machines, algorithmic match-3 solvers, animation timeline choreographies, input buffering, and modular gear architectures.',
-      comp2Title: 'Deterministic Multiplayer & Engines',
-      comp2Desc: 'Tick-based lockstep simulation, deterministic physics concepts, Photon Quantum prototype integration, and memory-conscious component lifecycles in Unity 2D/3D.',
-      comp3Title: 'Engine Profiling & Optimization',
-      comp3Desc: 'Diagnosing CPU/GPU bottlenecks using Unity Memory Profiler and Frame Debugger, draw call reduction via GPU batching, dynamic UGUI canvas isolation, and Addressables.',
-      comp4Title: 'Infra, Tooling & Native Debugging',
-      comp4Desc: 'Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry query filtering, macOS LiveOps desktop tools (Swift, Python), and fullstack web platforms (Next.js).'
-    },
-    timeline: {
-      tag: 'CAREER PATH',
-      title: 'Experience & Milestones',
-      job1Date: 'Nov 2024 — 2026',
-      job1Role: 'Infra Engineer',
-      job1Company: 'Gear Games',
-      job1Bullets: [
-        'Diagnosed and resolved critical third-party SDK defects across In-App Purchases (IAP), Firebase, and Facebook SDK.',
-        'Filtered production crash signatures, telemetry, and distributed logs using Splunk queries to isolate root causes.',
-        'Maintained and developed macOS internal tools for Live Ops using Xcode, Swift, and Python; accelerated velocity with AI-augmented workflows.'
-      ],
-      job2Date: 'Mar 2024 — Nov 2024',
-      job2Role: 'Client Engineer — Custom Car Racing',
-      job2Company: 'Gear Games',
-      job2Bullets: [
-        'Architected an extensible animation timeline framework for dynamic 3D vehicle customization and parts swapping.',
-        'Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.',
-        'Translated complex GDD mechanics into decoupled, testable gameplay modules.'
-      ],
-      job3Date: 'Aug 2023 — Mar 2024',
-      job3Role: 'Client Engineer — Idle Combat & Obstacles',
-      job3Company: 'Gear Games',
-      job3Bullets: [
-        'Engineered physics interactions, trigger logic, and spatial hazards for moving obstacle courses.',
-        'Implemented autonomous character combat state machines, auto-attack sequencing, and modular gear stat progression.',
-        'Integrated combat feedback VFX (hit impacts, camera shakes) and responsive mobile HUD interfaces.'
-      ],
-      job4Date: 'Nov 2021 — Aug 2023',
-      job4Role: 'Client Engineer — Survival Prototype & Puzzle Strike',
-      job4Company: 'Gear Games',
-      job4Bullets: [
-        'Phase 1 (Prototype): Implemented weapon ballistic mechanics, character skills, and combat hooks interacting with Photon Quantum.',
-        'Phase 2 (Released Title): Engineered core match-3 grid solver algorithms, cascading logic, and full turn-based combat damage/mana progression.',
-        'Integrated artist 3D character models into Unity, authored timeline choreography for skills and movements, and built responsive in-game UI/UX.'
-      ],
-      job5Date: 'Apr 2021 — Nov 2021',
-      job5Role: 'Client Engineer Intern',
-      job5Company: 'Gear Inc',
-      job5Bullets: [
-        'Engineered a Final Fantasy-inspired 2D RPG 100% solo as both University Graduation Thesis and 6-month Internship Capstone (art/audio, tilemaps, 4 heroes, combat, save/load).',
-        'Rebuilt classic titles (Flappy Bird, Gold Miner) to master Unity component lifecycles, design patterns, and team Git workflows.'
-      ],
-      job6Date: '2020',
-      job6Role: 'Backend Developer Intern (OJT)',
-      job6Company: 'Enouvo IT Solutions',
-      job6Bullets: [
-        'Collaborated under senior guidance to run API test suites using Postman and troubleshoot Node.js backend services.',
-        'Gained foundational server-side insights before strategically pivoting into interactive game client engineering.'
-      ],
-      edu1Date: '2018 — 2022',
-      edu1Role: 'Bachelor of Information Technology',
-      edu1Company: 'University of Greenwich Vietnam',
-      edu1Bullets: [
-        'Selected by Google Developers as one of the first 9 Google Developer Student Club (DSC) Leads across Vietnam.',
-        'Represented Vietnam at Google DSC SEA Summit 2019 in Malaysia; spearheaded university tech bootcamps in Flutter, Firebase, and GCP.'
-      ],
-      edu2Date: '2015 — 2018',
-      edu2Role: 'Specialized in Informatics (Chuyên Tin)',
-      edu2Company: 'Le Quy Don High School for the Gifted',
-      edu2Bullets: [
-        'National Science & Technology Contest (KHKT Cấp Quốc Gia) Award for IoT Smart Fire & Air Early Warning System (Arduino, MQ-135, SIM900A).',
-        'Co-developed Smart Assistive Glasses for motor-impaired users (head accelerometer mouse & voice STT); researched traffic density via OpenCV.'
-      ]
-    },
-    contact: {
-      tag: 'CONTACT',
-      title: "Let's Connect",
-      desc: 'Looking for a seasoned Unity engineer to build gameplay systems, optimize core performance, or engineer client infrastructure? Reach out directly.',
-      emailLabel: 'Email',
-      phoneLabel: 'Phone',
-      locationLabel: 'Location',
-      discordLabel: 'Discord',
-      copied: 'Copied!',
-      formName: 'Your Name',
-      formEmail: 'Your Email',
-      formMessage: 'Message / Project Brief',
-      sendBtn: 'Send Message'
-    },
-    footer: {
-      rights: 'All rights reserved.',
-      designedBy: 'Designed & Engineered by IrrationaL (Vu Dinh Nghia Hung)'
+        p8Role: "Trải nghiệm Web",
+        p8Title: "Velvet Vines",
+        p8Desc: "Ứng dụng web trò chơi tiệc tùng và thẻ bài được thiết kế cho các buổi tụ họp bạn bè với chuyển động mượt mà."
+      },
+      skills: {
+        tag: "NĂNG LỰC KỸ THUẬT",
+        title: "Lĩnh Vực Chuyên Môn",
+        desc: "Các chuyên môn kỹ thuật chuyên sâu về netcode đồng bộ, cơ chế gameplay, tối ưu bộ nhớ và tích hợp nền tảng native.",
+        comp1Title: "Kiến Trúc Gameplay & Hệ Thống Chiến Đấu",
+        comp1Desc: "Công thức sát thương theo lượt, máy trạng thái hữu hạn (FSM), giải thuật bàn cờ match-3, biên đạo timeline diễn hoạt, đệm dữ liệu phím bấm và hệ thống chỉ số trang bị module.",
+        comp2Title: "Multiplayer Đồng Bộ (Deterministic) & Engine",
+        comp2Desc: "Mô phỏng lockstep theo nhịp tick, nguyên lý vật lý đồng bộ, tích hợp nguyên mẫu rollback Photon Quantum và quản lý vòng đời component tối ưu bộ nhớ trong Unity 2D/3D.",
+        comp3Title: "Phân Tích Hiệu Năng & Tối Ưu Engine",
+        comp3Desc: "Chẩn đoán điểm nghẽn CPU/GPU với Unity Memory Profiler và Frame Debugger, gom nhóm GPU batching, cô lập Canvas UGUI và quản lý tài nguyên Addressables.",
+        comp4Title: "Hạ Tầng Nền Tảng & Native SDKs",
+        comp4Desc: "Khắc phục sự cố Native iOS/Android SDK (IAP, Firebase, Facebook), lọc dữ liệu viễn thám Splunk, công cụ LiveOps macOS (Swift, Python) và nền tảng web fullstack (Next.js)."
+      },
+      experience: {
+        tag: "LỘ TRÌNH SỰ NGHIỆP",
+        title: "Kinh Nghiệm & Cột Mốc",
+        desc: "Hơn 4 năm sản xuất game tại studio, xử lý hạ tầng native và vai trò dẫn dắt kỹ thuật.",
+        toggleEarly: "Xem các mốc học vấn & khởi đầu (2015 — 2021)",
+        hideEarly: "Ẩn các mốc khởi đầu & học vấn",
+
+        job1Date: "11/2024 — Hiện tại",
+        job1Role: "Kỹ Sư Hạ Tầng (Infra Engineer)",
+        job1Company: "Gear Games · Đà Nẵng, Việt Nam",
+        job1Bullets: [
+          "Chẩn đoán và khắc phục lỗi nghiêm trọng của SDK bên thứ ba trên In-App Purchases (IAP), Firebase và Facebook SDK.",
+          "Phân tích chữ ký crash sản xuất, dữ liệu viễn thám và nhật ký phân tán bằng truy vấn Splunk để xác định nguyên nhân gốc rễ.",
+          "Bảo trì và phát triển công cụ nội bộ macOS cho Live Ops bằng Xcode, Swift và Python; tăng tốc quy trình làm việc với sự hỗ trợ của AI."
+        ],
+
+        job2Date: "03/2024 — 11/2024",
+        job2Role: "Kỹ Sư Client — Custom Car Racing",
+        job2Company: "Gear Games · Đà Nẵng, Việt Nam",
+        job2Bullets: [
+          "Xây dựng khung timeline diễn hoạt mở rộng cho hệ thống tùy biến xe 3D và thay thế linh kiện linh hoạt.",
+          "Tái cấu trúc giao diện và shader để giảm thiểu draw calls và tối ưu gom nhóm GPU trên phần cứng di động.",
+          "Chuyển hóa các cơ chế tài liệu GDD phức tạp thành các module gameplay độc lập, dễ dàng kiểm thử."
+        ],
+
+        job3Date: "08/2023 — 03/2024",
+        job3Role: "Kỹ Sư Client — Idle Combat & Obstacles",
+        job3Company: "Gear Games · Đà Nẵng, Việt Nam",
+        job3Bullets: [
+          "Lập trình tương tác vật lý, logic kích hoạt và hiểm họa không gian cho đường đua chướng ngại vật di động.",
+          "Xây dựng máy trạng thái chiến đấu tự động cho nhân vật, chuỗi đòn đánh tự động và tiến trình chỉ số trang bị.",
+          "Tích hợp hiệu ứng phản hồi chiến đấu (va chạm, rung camera) và giao diện HUD mobile phản hồi nhanh."
+        ],
+
+        job4Date: "11/2021 — 08/2023",
+        job4Role: "Kỹ Sư Client — Survival Prototype & Puzzle Strike",
+        job4Company: "Gear Games · Đà Nẵng, Việt Nam",
+        job4Bullets: [
+          "Giai đoạn 1 (Nguyên mẫu): Lập trình cơ chế đường đạn, kỹ năng tướng và điểm nối chiến đấu tương tác với Photon Quantum.",
+          "Giai đoạn 2 (Sản phẩm phát hành): Xây dựng thuật toán bàn cờ match-3 cốt lõi, cơ chế rơi combo và tính toán sát thương/mana theo lượt.",
+          "Tích hợp mô hình 3D từ nghệ sĩ vào Unity, biên đạo timeline cho chiêu thức và xây dựng giao diện in-game."
+        ],
+
+        m1Date: "04/2021 — 11/2021",
+        m1Title: "Thực tập sinh Kỹ sư Client @ Gear Inc",
+        m1Desc: "Xây dựng game 2D RPG phong cách Final Fantasy độc lập 100% cho cả Đồ án tốt nghiệp và Báo cáo thực tập (chiến đấu, tilemap, lưu/tải dữ liệu).",
+
+        m2Date: "2020",
+        m2Title: "Thực tập sinh Backend @ Enouvo IT Solutions",
+        m2Desc: "Phối hợp chạy bộ kiểm thử API bằng Postman và gỡ lỗi dịch vụ backend Node.js dưới sự hướng dẫn của đàn anh đi trước.",
+
+        m3Date: "2018 — 2022",
+        m3Title: "Cử nhân Công nghệ Thông tin @ Đại học Greenwich Việt Nam",
+        m3Desc: "Được Google Developers chọn là 1 trong 9 Chủ nhiệm CLB Sinh viên Nhà phát triển Google (DSC Lead) đầu tiên tại Việt Nam. Đại diện Việt Nam dự Hội nghị Google DSC SEA 2019 tại Malaysia.",
+
+        m4Date: "2015 — 2018",
+        m4Title: "Chuyên Tin học @ THPT Chuyên Lê Quý Đôn Đà Nẵng",
+        m4Desc: "Giải Cuộc thi KHKT Cấp Quốc gia cho Hệ thống cảnh báo cháy & không khí sớm IoT. Nghiên cứu thị giác máy tính mật độ giao thông bằng OpenCV."
+      },
+      about: {
+        tag: "HỒ SƠ CÁ NHÂN",
+        title: "Về Bản Thân",
+        photoTag: "Vũ Đình Nghĩa Hưng // IrrationaL",
+        photoRole: "Kỹ Sư Game Client & Hạ Tầng",
+        lead: "Kỹ Sư Game Client & Hạ Tầng Kỹ Thuật với hơn 4 năm kinh nghiệm thực chiến, kết nối giữa cơ chế gameplay cốt lõi, netcode đồng bộ và độ ổn định SDK trên thiết bị người dùng.",
+        p1: "Trong hơn 4 năm tại Gear Games, tôi đảm nhiệm cả vai trò Kỹ sư Client và Kỹ sư Hạ tầng. Công việc trải dài toàn bộ quy trình sản xuất game: từ thuật toán chiến đấu, timeline tùy biến phương tiện, đến phân tích sâu các sự cố crash SDK native (IAP, Firebase, Facebook SDK) và dữ liệu viễn thám Splunk.",
+        p2: "Trước đó, tôi vinh dự là 1 trong 9 đại diện đầu tiên tại Việt Nam được Google Developers lựa chọn làm Google DSC Lead, tham dự hội nghị tại Malaysia năm 2019. Tôi tốt nghiệp Cử nhân CNTT tại Đại học Greenwich và lớp Chuyên Tin trường THPT Chuyên Lê Quý Đôn Đà Nẵng."
+      },
+      contact: {
+        tag: "LIÊN HỆ",
+        title: "Cùng Nhau Tạo Nên Trải Nghiệm Đột Phá",
+        desc: "Bạn đang tìm kiếm một kỹ sư Unity giàu kinh nghiệm để thiết kế kiến trúc gameplay, giải quyết netcode multiplayer đồng bộ, hoặc tối ưu hóa hạ tầng client? Hãy trò chuyện ngay.",
+        composeEmail: "Gửi Email Trực Tiếp",
+        discordCopy: "Discord: _irrational_",
+        copiedToast: "Đã sao chép Discord ID vào bộ nhớ tạm!"
+      },
+      footer: {
+        rights: "Bảo lưu mọi quyền.",
+        designedBy: "Phát triển bởi IrrationaL (Vũ Đình Nghĩa Hưng)",
+        sourceCode: "Xem mã nguồn trên GitHub"
+      }
     }
-  },
-  vi: {
-    nav: {
-      projects: 'Dự Án',
-      competencies: 'Năng Lực',
-      experience: 'Kinh Nghiệm',
-      about: 'Về Tôi',
-      contact: 'Liên Hệ',
-      cv: 'Tải CV'
-    },
-    hero: {
-      status: 'SẴN SÀNG CHO VỊ TRÍ CLIENT & INFRA',
-      greeting: 'Xin chào, tôi là',
-      title: 'IrrationaL',
-      subtitle: 'Vũ Đình Nghĩa Hưng',
-      role: 'KỸ SƯ GAME CLIENT & INFRA',
-      bio: 'Chuyên sâu xây dựng combat multiplayer deterministic, hệ thống gameplay mượt mà và tối ưu hóa hạ tầng client. 4+ năm kinh nghiệm sản xuất thực chiến tại Gear Games.',
-      viewWork: 'Xem Dự Án',
-      hireMe: 'Liên Hệ Ngay',
-      downloadCv: 'Tải CV (PDF)',
-      location: 'Đà Nẵng, Việt Nam',
-      experiencePill: '4+ Năm Tại Gear Games',
-      shippedPill: 'Kỹ Thuật Client & Infra'
-    },
-    about: {
-      tag: 'HỒ SƠ NĂNG LỰC',
-      title: 'Về Bản Thân',
-      lead: 'Kỹ sư Game Client & Infra với 4+ năm kinh nghiệm thực chiến, chuyên sâu về logic gameplay, đồng bộ multiplayer deterministic và hạ tầng native SDK.',
-      p1: 'Trong suốt hơn 4 năm tại Gear Games, tôi đảm nhiệm vai trò Kỹ Sư Client và Kỹ Sư Infra. Phạm vi công việc bao quát trọn vẹn quy trình làm game: từ lập trình thuật toán combat, timeline độ xe 3D và bẫy vượt chướng ngại vật, cho đến phân tích sâu các sự cố crash SDK native (IAP, Firebase, Facebook) và truy vấn telemetry trên Splunk.',
-      p2: 'Khởi đầu từ chuyên Tin THPT Chuyên Lê Quý Đôn Đà Nẵng với các giải thưởng KHKT & Tin học, tôi được Google lựa chọn là 1 trong 9 Google Developer Student Club (DSC) Lead đầu tiên tại Việt Nam và tham dự Hội nghị Thượng đỉnh Malaysia 2019. Tôi tốt nghiệp Cử nhân Công nghệ Thông tin tại Đại học Greenwich Việt Nam.',
-      profileCardTitle: 'Thông Số Kỹ Thuật',
-      specRoleLabel: 'Vị Trí',
-      specRoleVal: 'Kỹ Sư Game Client & Infra',
-      specExpLabel: 'Kinh Nghiệm',
-      specExpVal: '4+ Năm (Gear Games)',
-      specFocusLabel: 'Trọng Tâm Lõi',
-      specFocusVal: 'Hệ thống Gameplay, Deterministic Netcode, Native SDK',
-      specStatusLabel: 'Trạng Thái',
-      specStatusVal: 'Sẵn sàng đón nhận cơ hội mới',
-      specEduLabel: 'Học Vấn',
-      specEduVal: 'Cử nhân CNTT · ĐH Greenwich Việt Nam'
-    },
-    projects: {
-      tag: 'DỰ ÁN TIÊU BIỂU',
-      title: 'Dự Án Nổi Bật',
-      desc: 'Các tựa game thương mại, nguyên mẫu sáng tạo và nền tảng hỗ trợ studio.',
-      shippedTitle: 'Game Thương Mại & Live Production',
-      shippedDesc: 'Các dự án phát hành chính thức, kiến trúc gameplay lõi và hỗ trợ hạ tầng outsource.',
-      capstoneTitle: 'Nguyên Mẫu & Đồ Án Nghiên Cứu',
-      capstoneDesc: 'Các hệ thống game tự xây dựng độc lập từ gốc và thử nghiệm cơ chế gameplay sâu.',
-      sideTitle: 'Hệ Thống Web & Nền Tảng Studio',
-      sideDesc: 'Các cổng thông tin giải đấu và ứng dụng tương tác thời gian thực xây dựng cho Gear Games.',
-      viewSource: 'Trực Tiếp',
-      viewRepo: 'Mã Nguồn GitHub',
-      articleReview: 'Báo Chí & Đánh Giá',
-      officialSite: 'Trang Chủ',
+  };
 
-      gameP1Title: 'Puzzle Strike: Combat RPG',
-      gameP1Role: 'Kỹ Sư Client (Gameplay & Hệ Thống Chiến Đấu)',
-      gameP1Desc: '<strong>Giai đoạn 1 (Multiplayer Prototype):</strong> Phát triển cơ chế vũ khí, kỹ năng nhân vật và logic combat tương tác với Photon Quantum cho nguyên mẫu battleground.<br/><strong>Giai đoạn 2 (Bản phát hành chính thức):</strong> Chuyển hướng sang Turn-based Combat RPG kết hợp Match-3. Đảm nhiệm thuật toán match-3 lõi, logic chiến đấu theo lượt, tích hợp mô hình 3D từ họa sĩ, timeline hoạt cảnh chiêu thức và toàn bộ UI/UX.',
+  const STORAGE_KEY = 'irrational-portfolio-lang';
+  let currentLang = 'en';
 
-      gameP2Title: 'POP! Slots (PlaySTUDIOS)',
-      gameP2Role: 'Hỗ Trợ Hạ Tầng & Engine Outsource',
-      gameP2Desc: 'Hỗ trợ kỹ thuật client outsource cho tựa game đối tác playSTUDIOS. Bảo trì hệ thống client, sửa lỗi bridge plugin, điều tra các sự cố crash SDK native (IAP, Firebase, Facebook) trên iOS/Android và phân tích profiler bộ nhớ / draw call.',
+  function getNestedValue(obj, path) {
+    return path.split('.').reduce((prev, curr) => (prev && prev[curr] !== undefined ? prev[curr] : null), obj);
+  }
 
-      gameP3Title: 'Custom Car Racing 3D',
-      gameP3Role: 'Kỹ Sư Client (Nguyên Mẫu 3D & Độ Xe)',
-      gameP3Desc: 'Nguyên mẫu game đua xe 3D di động (chưa phát hành). Thiết kế kiến trúc timeline hiệu ứng tùy biến xe đua dạng module, phản hồi đồ họa tương tác và tối ưu ngân sách draw call UI/UX.',
+  function updateDOM(lang) {
+    const dict = translations[lang] || translations.en;
+    document.documentElement.setAttribute('lang', lang);
 
-      gameP4Title: 'Idle Combat & Vượt Chướng Ngại Vật',
-      gameP4Role: 'Kỹ Sư Client (Prototype Toàn Diện)',
-      gameP4Desc: 'Nguyên mẫu nội bộ kết hợp cơ chế idle combat tự động với vượt chướng ngại vật và đấu trường sinh tồn. Tự tay thiết kế logic bẫy chướng ngại vật, AI state machine tự đánh cho nhân vật, hệ thống trang bị, VFX và toàn bộ HUD di động.',
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = getNestedValue(dict, key);
+      if (val !== null) {
+        if (typeof val === 'string' && val.includes('<')) {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      }
+    });
 
-      gameP5Title: 'Game 2D RPG Phong Cách Final Fantasy',
-      gameP5Role: 'Kỹ Sư & Kiến Trúc Sư Độc Lập (Đồ Án Tốt Nghiệp)',
-      gameP5Desc: 'Tự tay phát triển 100% làm Đồ án tốt nghiệp Đại học kiêm Đồ án kết thúc 6 tháng thực tập tại Gear Inc. Tự tìm kiếm tài nguyên art/sound, vẽ tilemap bản đồ, lập trình 4 nhân vật, combat theo lượt, và hệ thống lưu/tải dữ liệu người chơi.',
-
-      webP1Title: 'Gear Games LoL Tournament',
-      webP1Role: 'Full-stack Tournament Hub',
-      webP1Desc: 'Cổng thông tin giải đấu LMHT nội bộ với bảng đấu trực tiếp, cập nhật kết quả tự động, lịch thi đấu và Easter egg ARAM Poro. Xây dựng bằng Next.js.',
-
-      webP2Title: 'Gear Games Badminton 2026',
-      webP2Role: 'Cổng Thông Tin Đấu Trường Thời Gian Thực',
-      webP2Desc: 'Cổng giải đấu cầu lông nội bộ với tính điểm trực tiếp theo thời gian thực, cập nhật nhánh đấu tự động, tích hợp bộ luật BWF chuẩn và trợ lý xoay tua giao cầu đánh đôi.',
-
-      webP3Title: 'Velvet Vines',
-      webP3Role: 'Trải Nghiệm Web Tương Tác',
-      webP3Desc: 'Ứng dụng web board game và bài tương tác tiệc tùng trên di động, thiết kế cho các buổi tụ họp với chuyển động micro-animation mượt mà.'
-    },
-    skills: {
-      tag: 'NĂNG LỰC CỐT LÕI',
-      title: 'Trọng Tâm Kỹ Thuật',
-      desc: 'Chuyên môn sâu về hệ thống gameplay, mạng deterministic, tối ưu hiệu năng engine và công cụ hỗ trợ vận hành studio.',
-      comp1Title: 'Hệ Thống Gameplay & Toán Học',
-      comp1Desc: 'Xây dựng cơ chế tương tác, finite state machine, công thức tính toán combat theo lượt, thuật toán solver match-3, timeline hoạt cảnh và hệ thống trang bị modular.',
-      comp2Title: 'Multiplayer Deterministic & Engine',
-      comp2Desc: 'Mô phỏng lockstep theo nhịp tick, vật lý deterministic, tích hợp prototype Photon Quantum và quản lý vòng đời bộ nhớ trong Unity 2D/3D.',
-      comp3Title: 'Profiling & Tối Ưu Hiệu Năng',
-      comp3Desc: 'Chẩn đoán nghẽn CPU/GPU qua Unity Memory Profiler và Frame Debugger, tối ưu số lượng draw call qua GPU batching, phân cấp UGUI và Addressables.',
-      comp4Title: 'Hạ Tầng, Tooling & Gỡ Lỗi Native',
-      comp4Desc: 'Điều tra chuyên sâu lỗi crash SDK native trên iOS/Android (IAP, Firebase, Facebook), phân tích log telemetry qua Splunk, phát triển tool macOS (Swift, Python) và nền tảng web (Next.js).'
-    },
-    timeline: {
-      tag: 'LỘ TRÌNH',
-      title: 'Kinh Nghiệm & Cột Mốc',
-      job1Date: '11/2024 — 2026',
-      job1Role: 'Kỹ Sư Infra',
-      job1Company: 'Gear Games',
-      job1Bullets: [
-        'Điều tra và giải quyết triệt để lỗi crash third-party SDK native trên IAP, Firebase và Facebook SDK.',
-        'Lọc và phân tích crash signature, telemetry từ log phân tán qua các truy vấn Splunk để cô lập nguyên nhân gốc rễ.',
-        'Bảo trì và phát triển các công cụ nội bộ trên macOS bằng Xcode, Swift và Python phục vụ đội ngũ Live Ops; tích hợp quy trình AI nâng cao hiệu suất.'
-      ],
-      job2Date: '03/2024 — 11/2024',
-      job2Role: 'Kỹ Sư Client — Game Đua Xe 3D Custom',
-      job2Company: 'Gear Games',
-      job2Bullets: [
-        'Thiết kế kiến trúc animation timeline dạng module phục vụ tùy biến các bộ phận xe 3D trong game đua xe di động.',
-        'Tái cấu trúc UI views và shader nhằm giảm thiểu draw call, tối ưu GPU batching trên nhiều thiết bị di động.',
-        'Chuyển giao các cơ chế phức tạp từ Game Design Document (GDD) thành các module gameplay độc lập và dễ kiểm thử.'
-      ],
-      job3Date: '08/2023 — 03/2024',
-      job3Role: 'Kỹ Sư Client — Idle Combat & Obstacles',
-      job3Company: 'Gear Games',
-      job3Bullets: [
-        'Lập trình tương tác vật lý, logic trigger và hệ thống cạm bẫy không gian cho các màn vượt chướng ngại vật di động.',
-        'Xây dựng finite state machine tự động chiến đấu, chuỗi auto-attack và hệ thống thăng tiến chỉ số trang bị modular.',
-        'Tích hợp hiệu ứng phản hồi chiến đấu (hit impacts, rung camera) và giao diện HUD di động mượt mà.'
-      ],
-      job4Date: '11/2021 — 08/2023',
-      job4Role: 'Kỹ Sư Client — Survival Prototype & Puzzle Strike',
-      job4Company: 'Gear Games',
-      job4Bullets: [
-        'Giai đoạn 1 (Prototype): Lập trình cơ chế đường đạn vũ khí, kỹ năng nhân vật và combat tương tác với Photon Quantum.',
-        'Giai đoạn 2 (Bản phát hành): Thiết kế thuật toán match-3 lõi, logic combo rơi khối và toàn bộ công thức sát thương/mana theo lượt.',
-        'Tích hợp mô hình nhân vật 3D từ artist vào Unity, biên đạo timeline hoạt cảnh di chuyển/chiêu thức và dựng UI/UX hoàn chỉnh.'
-      ],
-      job5Date: '04/2021 — 11/2021',
-      job5Role: 'Thực Tập Sinh Kỹ Sư Client',
-      job5Company: 'Gear Inc',
-      job5Bullets: [
-        'Tự tay phát triển 100% tựa game 2D RPG theo phong cách Final Fantasy làm Đồ án Tốt nghiệp và Đồ án hoàn thành kỳ thực tập 6 tháng.',
-        'Tái lập trình hoàn chỉnh các tựa game kinh điển (Flappy Bird, Đào Vàng) để làm chủ lifecycle Unity, design pattern và quy trình Git đội ngũ.'
-      ],
-      job6Date: '2020',
-      job6Role: 'Thực Tập Sinh Lập Trình Backend (OJT)',
-      job6Company: 'Enouvo IT Solutions',
-      job6Bullets: [
-        'Thực tập theo chương trình nhà trường, kiểm thử API bằng Postman và xử lý các lỗi nhỏ trong hệ thống backend Node.js.',
-        'Có được góc nhìn nền tảng về hệ thống server trước khi định hướng chuyển hẳn sang đam mê kỹ thuật game client tương tác.'
-      ],
-      edu1Date: '2018 — 2022',
-      edu1Role: 'Cử Nhân Công Nghệ Thông Tin',
-      edu1Company: 'Đại Học Greenwich Việt Nam',
-      edu1Bullets: [
-        'Được Google Developers lựa chọn là 1 trong 9 Google Developer Student Club (DSC) Lead đầu tiên tại Việt Nam.',
-        'Đại diện Việt Nam tham dự Google DSC SEA Summit 2019 tại Malaysia; tổ chức các workshop công nghệ về Flutter, Firebase và GCP.'
-      ],
-      edu2Date: '2015 — 2018',
-      edu2Role: 'Chuyên Tin Học',
-      edu2Company: 'THPT Chuyên Lê Quý Đôn Đà Nẵng',
-      edu2Bullets: [
-        'Giải thưởng Cuộc thi Khoa học Kỹ thuật (KHKT) Cấp Quốc Gia với Hệ thống cảnh báo sớm cháy nổ và ô nhiễm không khí thông minh (Arduino, MQ-135, SIM900A).',
-        'Đồng phát triển Kính thông minh hỗ trợ người khuyết tật (chuột điều khiển theo cử động đầu và nhận diện giọng nói); nghiên cứu đo mật độ xe bằng OpenCV.'
-      ]
-    },
-    contact: {
-      tag: 'LIÊN HỆ',
-      title: 'Kết Nối',
-      desc: 'Bạn đang tìm kiếm kỹ sư game client giàu kinh nghiệm hoặc muốn thảo luận về kiến trúc hệ thống game, tối ưu hóa và hạ tầng client? Hãy liên hệ ngay.',
-      emailLabel: 'Email',
-      phoneLabel: 'Điện Thoại',
-      locationLabel: 'Địa Điểm',
-      discordLabel: 'Discord',
-      copied: 'Đã sao chép!',
-      formName: 'Họ và Tên',
-      formEmail: 'Địa Chỉ Email',
-      formMessage: 'Nội Dung Tin Nhắn',
-      sendBtn: 'Gửi Tin Nhắn'
-    },
-    footer: {
-      rights: 'Đã đăng ký bản quyền.',
-      designedBy: 'Thiết kế & Lập trình bởi IrrationaL (Vũ Đình Nghĩa Hưng)'
+    // Update lang toggle button text
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+      const textSpan = langBtn.querySelector('.lang-text');
+      if (textSpan) {
+        textSpan.textContent = lang === 'en' ? 'VI' : 'EN';
+      }
+      langBtn.setAttribute('title', lang === 'en' ? 'Chuyển sang Tiếng Việt' : 'Switch to English');
     }
   }
-};
 
-let currentLang = localStorage.getItem('site_lang') || 'en';
+  function setLanguage(lang) {
+    if (!translations[lang]) return;
+    currentLang = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
+    updateDOM(lang);
+  }
 
-function setLanguage(lang) {
-  if (!translations[lang]) return;
-  currentLang = lang;
-  localStorage.setItem('site_lang', lang);
+  function toggleLanguage() {
+    const target = currentLang === 'en' ? 'vi' : 'en';
+    setLanguage(target);
+  }
 
-  const t = translations[lang];
+  document.addEventListener('DOMContentLoaded', () => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const browserLang = navigator.language && navigator.language.startsWith('vi') ? 'vi' : 'en';
+    setLanguage(saved || browserLang);
 
-  document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const key = el.getAttribute('data-i18n');
-    const value = getNestedTranslation(t, key);
-    if (value !== undefined) {
-      const innerSpan = el.querySelector(':scope > span');
-      if (innerSpan && el.querySelector(':scope > svg')) {
-        innerSpan.innerHTML = value;
-      } else {
-        el.innerHTML = value;
-      }
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+      langBtn.addEventListener('click', toggleLanguage);
     }
   });
 
-  const langToggleBtn = document.getElementById('lang-toggle');
-  if (langToggleBtn) {
-    const langText = langToggleBtn.querySelector('.lang-text');
-    if (langText) {
-      langText.textContent = lang === 'en' ? 'VI' : 'EN';
-    }
-  }
-
-  document.documentElement.lang = lang;
-}
-
-function getNestedTranslation(obj, path) {
-  return path.split('.').reduce((prev, curr) => (prev ? prev[curr] : undefined), obj);
-}
-
-function toggleLanguage() {
-  const nextLang = currentLang === 'en' ? 'vi' : 'en';
-  setLanguage(nextLang);
-}
+  window.portfolioI18n = {
+    setLanguage,
+    toggleLanguage,
+    getCurrentLanguage: () => currentLang,
+    getDictionary: (lang) => translations[lang || currentLang]
+  };
+})();

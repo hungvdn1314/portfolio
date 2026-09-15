@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="amber">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,10 +8,14 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <!-- Ambient Cursor-Follow Spotlight & Grid Pattern -->
+  <div class="ambient-spotlight"></div>
+  <div class="ambient-grid"></div>
 
   <div class="content-wrapper">
 
@@ -19,7 +23,7 @@
     <header class="navbar">
       <div class="container nav-container">
         <a href="#hero" class="brand-logo">
-          <span class="cyan-dot"></span>
+          <span class="status-dot"></span>
           <span class="alias">IRRATIONAL</span>
           <span class="sub-alias">// HUNG VDN</span>
         </a>
@@ -35,7 +39,14 @@
         </nav>
 
         <div class="nav-actions">
-          <button id="lang-toggle" class="btn-lang" aria-label="Switch Language">
+          <!-- Live Theme Switcher (Amber <-> Cyan) -->
+          <button id="theme-toggle-btn" class="btn-theme" title="Toggle Accent Color (Amber / Cyan)">
+            <span class="theme-color-indicator"></span>
+            <span class="theme-label">Amber Accent</span>
+          </button>
+
+          <!-- Language Switcher (EN <-> VI) -->
+          <button id="lang-toggle" class="btn-lang" aria-label="Switch Language" title="Switch Language">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
             <span class="lang-text">VI</span>
           </button>
@@ -52,696 +63,579 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section — High-Impact Typography & Spacious Layout -->
     <section id="hero" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-status">
-            <span class="blink-indicator"></span>
-            <span data-i18n="hero.status">AVAILABLE FOR CLIENT & INFRA ROLES</span>
+      <div class="container">
+        <div class="hero-content-centered reveal-on-scroll">
+          
+          <div class="hero-status-pill">
+            <span class="status-beacon"></span>
+            <span data-i18n="hero.status">AVAILABLE FOR PRODUCTION CLIENT & INFRA ROLES</span>
           </div>
-          
-          <p class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</p>
+
+          <p class="hero-intro" data-i18n="hero.intro">Hi, I'm</p>
           <h1 class="hero-title" data-i18n="hero.title">IrrationaL</h1>
-          <h2 class="hero-subtitle" data-i18n="hero.subtitle">Vu Dinh Nghia Hung</h2>
-          <div class="hero-role" data-i18n="hero.role">GAME CLIENT & INFRA ENGINEER</div>
-          
-          <p class="hero-bio" data-i18n="hero.bio">
-            Architecting deterministic multiplayer combat, responsive gameplay systems, and production engine infrastructure. 4+ years of hands-on production experience at Gear Games.
+          <h2 class="hero-realname" data-i18n="hero.realname">Vu Dinh Nghia Hung</h2>
+          <div class="hero-role-tag">
+            <span>//</span>
+            <span data-i18n="hero.role">GAME CLIENT & INFRA ENGINEER</span>
+          </div>
+
+          <p class="hero-summary" data-i18n="hero.summary">
+            Architecting deterministic multiplayer combat, responsive gameplay mechanics, and production-grade client infrastructure. 4+ years of hands-on game engineering at Gear Games.
           </p>
 
-          <div class="hero-ctas">
+          <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              <span data-i18n="hero.viewWork">View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span data-i18n="hero.exploreWork">Explore Featured Work</span>
             </a>
+
             <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               <span data-i18n="hero.downloadCv">Download CV</span>
             </a>
-            <a href="#contact" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span data-i18n="hero.hireMe">Let's Connect</span>
+
+            <a href="#contact" class="btn btn-accent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span data-i18n="hero.getInTouch">Get in Touch</span>
             </a>
           </div>
 
-          <div class="hero-badges">
-            <div class="hero-badge-item">
+          <div class="hero-meta-strip">
+            <div class="meta-chip">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <span data-i18n="hero.location">Da Nang, Vietnam</span>
             </div>
-            <div class="hero-badge-item">
+            <div class="meta-chip">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               <span data-i18n="hero.experiencePill">4+ Years at Gear Games</span>
             </div>
-            <div class="hero-badge-item">
+            <div class="meta-chip">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <span data-i18n="hero.shippedPill">Client & Infra Engineering</span>
+              <span data-i18n="hero.focusPill">Unity & Deterministic Netcode</span>
             </div>
           </div>
-        </div>
 
-        <div class="hero-avatar-wrapper">
-          <div class="avatar-profile-card">
-            <div class="avatar-img-frame">
-              <img src="assets/profile.jpg" alt="Vu Dinh Nghia Hung - IrrationaL" />
-            </div>
-            <div class="avatar-meta">
-              <div class="avatar-meta-title">Vu Dinh Nghia Hung</div>
-              <div class="avatar-meta-role">Game Client & Infra Engineer</div>
-              <div class="avatar-meta-badge">
-                <span class="bolt">⚡</span>
-                <span>4+ Years Production · Ex-Gear Games</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section — Featured Rows with Group-Hover Dimming -->
     <section id="projects" class="projects">
       <div class="container">
-        <div class="section-tag" data-i18n="projects.tag">PORTFOLIO</div>
-        <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
-        <p class="section-desc" data-i18n="projects.desc">Commercial titles, gameplay prototypes, and studio engineering platforms.</p>
+        <div class="section-tag reveal-on-scroll" data-i18n="projects.tag">PORTFOLIO</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="projects.title">Featured Projects</h2>
+        <p class="section-desc reveal-on-scroll" data-i18n="projects.desc">Commercial releases, deterministic multiplayer prototypes, and studio engineering platforms.</p>
 
-        <!-- Category 1: Commercial & Live Titles -->
-        <div class="project-category-header">
-          <h3 class="project-category-title">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M6 12h4m-2-2v4m10-2h.01m-3 0h.01"></path></svg>
-            <span data-i18n="projects.shippedTitle">Commercial & Live Titles</span>
-          </h3>
-          <p class="project-category-desc" data-i18n="projects.shippedDesc">Production releases, core gameplay systems, and live outsource engine support.</p>
+        <!-- Group 1: Commercial Releases -->
+        <div class="projects-group-header reveal-on-scroll">
+          <span class="projects-group-label" data-i18n="projects.shippedLabel">COMMERCIAL & LIVE TITLES</span>
+          <span class="projects-group-line"></span>
         </div>
 
-        <div class="projects-grid">
-          <!-- Game 1: Puzzle Strike -->
-          <div class="project-card">
-            <div class="project-media">
-              <img src="assets/projects/puzzlestrike-1.jpg" alt="Puzzle Strike: Combat RPG" class="project-media-img" />
+        <div class="featured-projects-list">
+          
+          <!-- Project 1: Puzzle Strike (With Interactive Video Trailer) -->
+          <div class="project-row reveal-on-scroll">
+            <div class="project-media-wrapper">
+              <img src="assets/projects/puzzlestrike-1.jpg" alt="Puzzle Strike: Combat RPG" class="project-thumbnail" />
+              <button id="play-puzzlestrike-trailer" class="video-play-overlay" aria-label="Play Gameplay Trailer" title="Watch Gameplay Video">
+                <div class="play-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+              </button>
             </div>
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.gameP1Role">Client Engineer (Gameplay & Combat Systems)</div>
-              <h4 class="project-title" data-i18n="projects.gameP1Title">Puzzle Strike: Combat RPG</h4>
-              <p class="project-desc" data-i18n="projects.gameP1Desc">
-                <strong>Phase 1 (Multiplayer Prototype):</strong> Engineered weapon mechanics, hero skills, and combat simulation interacting with Photon Quantum.<br/>
-                <strong>Phase 2 (Production Release):</strong> Pivoted to a turn-based Combat RPG. Owned core match-3 grid algorithms, turn-based combat math, 3D character animation timeline integration, and responsive mobile HUD.
+
+            <div class="project-info">
+              <div class="project-role-badge" data-i18n="projects.p1Role">Client Engineer (Gameplay & Combat Systems)</div>
+              <h3 class="project-heading" data-i18n="projects.p1Title">Puzzle Strike: Combat RPG</h3>
+              <p class="project-body" data-i18n="projects.p1Desc">
+                <strong>Phase 1 (Multiplayer Prototype):</strong> Engineered weapon ballistics, hero skills, and combat simulation on top of Photon Quantum deterministic netcode.<br/>
+                <strong>Phase 2 (Commercial Release):</strong> Pivoted into a turn-based Combat RPG. Owned core match-3 grid algorithms, cascading solvers, turn damage math, 3D character animation timelines, and mobile UGUI.
               </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Unity</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Photon Quantum</span>
-                <span class="tech-tag">Match-3 Engine</span>
-                <span class="tech-tag">Combat Math</span>
-                <span class="tech-tag">Animation Timelines</span>
-                <span class="tech-tag">Mobile UGUI</span>
+              
+              <div class="tech-capsule-row">
+                <span class="tech-capsule">Unity</span>
+                <span class="tech-capsule">C#</span>
+                <span class="tech-capsule">Photon Quantum</span>
+                <span class="tech-capsule">Match-3 Engine</span>
+                <span class="tech-capsule">Combat Math</span>
+                <span class="tech-capsule">Animation Timelines</span>
+                <span class="tech-capsule">Mobile UGUI</span>
               </div>
-              <div class="project-links">
-                <a href="https://afkmobi.com/puzzle-strike-combat-rpg-game-xep-hinh-giai-do-phong-cach-match-3.html" target="_blank" rel="noopener noreferrer" class="project-link-btn" >
-                  <span data-i18n="projects.articleReview">News Coverage</span>
+
+              <div class="project-action-links">
+                <a href="#" id="play-puzzlestrike-trailer-link" class="action-link" onclick="document.getElementById('play-puzzlestrike-trailer').click(); return false;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <span data-i18n="projects.watchTrailer">Watch Gameplay Trailer</span>
+                </a>
+
+                <a href="https://afkmobi.com/puzzle-strike-combat-rpg-game-xep-hinh-giai-do-phong-cach-match-3.html" target="_blank" rel="noopener noreferrer" class="action-link">
+                  <span data-i18n="projects.newsCoverage">Press Review (AFKmobi)</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Game 2: POP! Slots -->
-          <div class="project-card">
-            <div class="project-media">
-              <img src="assets/projects/popslots.png" alt="POP! Slots (PlaySTUDIOS)" class="project-media-img" />
+          <!-- Project 2: POP! Slots -->
+          <div class="project-row reveal-on-scroll">
+            <div class="project-media-wrapper">
+              <img src="assets/projects/popslots.png" alt="POP! Slots (playSTUDIOS)" class="project-thumbnail" />
             </div>
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.gameP2Role">Outsource Client & SDK Infrastructure Support</div>
-              <h4 class="project-title" data-i18n="projects.gameP2Title">POP! Slots (PlaySTUDIOS)</h4>
-              <p class="project-desc" data-i18n="projects.gameP2Desc">
-                Assisted outsource client engineering for playSTUDIOS' global hit. Maintained core client subsystems, patched native bridge plugins, triaged native iOS/Android crashes across IAP, Firebase, and Facebook SDKs, and performed memory/draw call profiling.
+
+            <div class="project-info">
+              <div class="project-role-badge" data-i18n="projects.p2Role">Outsource Client & SDK Infrastructure Support</div>
+              <h3 class="project-heading" data-i18n="projects.p2Title">POP! Slots (playSTUDIOS)</h3>
+              <p class="project-body" data-i18n="projects.p2Desc">
+                Supported client engineering for playSTUDIOS' global top-grossing casino title. Maintained core client subsystems, resolved native bridge crashes (IAP, Firebase, Facebook SDKs), and profiled memory allocations and GPU draw call budgets using Splunk and Unity Profiler.
               </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Unity</span>
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Native SDKs (iOS/Android)</span>
-                <span class="tech-tag">Splunk</span>
-                <span class="tech-tag">Memory Profiler</span>
-                <span class="tech-tag">Frame Debugger</span>
+
+              <div class="tech-capsule-row">
+                <span class="tech-capsule">Unity</span>
+                <span class="tech-capsule">C++ / C#</span>
+                <span class="tech-capsule">Native iOS/Android SDKs</span>
+                <span class="tech-capsule">Splunk Telemetry</span>
+                <span class="tech-capsule">Memory Profiler</span>
+                <span class="tech-capsule">Frame Debugger</span>
               </div>
-              <div class="project-links">
-                <a href="https://www.playstudios.com/pop-slots/" target="_blank" rel="noopener noreferrer" class="project-link-btn" >
-                  <span data-i18n="projects.officialSite">Official Site</span>
+
+              <div class="project-action-links">
+                <a href="https://www.playstudios.com/pop-slots/" target="_blank" rel="noopener noreferrer" class="action-link">
+                  <span data-i18n="projects.officialSite">Official Title Site</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- Category 2: Prototypes & Capstone Labs -->
-        <div class="project-category-header">
-          <h3 class="project-category-title">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <span data-i18n="projects.capstoneTitle">Prototypes & Gameplay Labs</span>
-          </h3>
-          <p class="project-category-desc" data-i18n="projects.capstoneDesc">Architectural prototypes, physics interactions, and solo capstone systems.</p>
+        <!-- Group 2: Prototypes & Labs -->
+        <div class="projects-group-header reveal-on-scroll" style="margin-top: 4.5rem;">
+          <span class="projects-group-label" data-i18n="projects.prototypesLabel">GAMEPLAY LABS & CAPSTONE SYSTEMS</span>
+          <span class="projects-group-line"></span>
         </div>
 
-        <div class="projects-grid">
-          <!-- Game 3: Custom Car Racing (Prototype) -->
-          <div class="project-card card-text-only">
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.gameP3Role">Client Engineer (Timeline & Customization Prototype)</div>
-              <h4 class="project-title" data-i18n="projects.gameP3Title">Custom Car Racing 3D</h4>
-              <p class="project-desc" data-i18n="projects.gameP3Desc">
-                Unreleased mobile 3D racing prototype. Architected modular vehicle customization timeline framework, parts swapping logic, visual feedback loops, and optimized mobile draw call budgets.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Animation Timelines</span>
-                <span class="tech-tag">Modular Customization</span>
-                <span class="tech-tag">UGUI Optimization</span>
-                <span class="tech-tag">Shaders</span>
-              </div>
+        <div class="secondary-projects-grid">
+          <!-- Card 3: Custom Car Racing -->
+          <div class="secondary-card reveal-on-scroll delay-1">
+            <div class="sec-category-label" data-i18n="projects.p3Role">Prototype</div>
+            <h4 class="sec-title" data-i18n="projects.p3Title">Custom Car Racing 3D</h4>
+            <p class="sec-desc" data-i18n="projects.p3Desc">
+              Unreleased mobile 3D racing prototype. Architected an extensible animation timeline framework for modular vehicle customization, dynamic parts swapping, and mobile shader draw call optimization.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">Unity 3D</span>
+              <span class="tech-capsule">C#</span>
+              <span class="tech-capsule">Timelines</span>
+              <span class="tech-capsule">Shader Batching</span>
             </div>
           </div>
 
-          <!-- Game 4: Idle Combat & Obstacles -->
-          <div class="project-card card-text-only">
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.gameP4Role">Client Engineer (End-to-End Prototype)</div>
-              <h4 class="project-title" data-i18n="projects.gameP4Title">Idle Combat & Obstacle Battleground</h4>
-              <p class="project-desc" data-i18n="projects.gameP4Desc">
-                Internal prototype fusing automated idle battle mechanics with dynamic obstacle traversal and battleground arenas. Built obstacle hazard logic, character combat AI state machines, modular gear progression, hit-stop VFX, and mobile HUD.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Unity</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Autonomous Combat AI</span>
-                <span class="tech-tag">Obstacle Physics</span>
-                <span class="tech-tag">Modular Gear System</span>
-                <span class="tech-tag">Particle VFX</span>
-              </div>
+          <!-- Card 4: Idle Combat & Obstacles -->
+          <div class="secondary-card reveal-on-scroll delay-2">
+            <div class="sec-category-label" data-i18n="projects.p4Role">Prototype</div>
+            <h4 class="sec-title" data-i18n="projects.p4Title">Idle Combat & Obstacle Arena</h4>
+            <p class="sec-desc" data-i18n="projects.p4Desc">
+              Internal gameplay prototype fusing automated idle battle mechanics with moving obstacle hazards. Built obstacle spatial triggers, character FSM AI, modular gear stats, and hit-stop camera VFX.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">Unity</span>
+              <span class="tech-capsule">Autonomous FSM</span>
+              <span class="tech-capsule">Physics Triggers</span>
+              <span class="tech-capsule">Combat Feedback</span>
             </div>
           </div>
 
-          <!-- Game 5: Final Fantasy RPG Capstone -->
-          <div class="project-card card-text-only">
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.gameP5Role">Solo Architect & Developer (Graduation Capstone)</div>
-              <h4 class="project-title" data-i18n="projects.gameP5Title">Final Fantasy-Inspired 2D RPG</h4>
-              <p class="project-desc" data-i18n="projects.gameP5Desc">
-                Engineered 100% solo as both University Graduation Thesis and 6-month Internship Capstone at Gear Inc. Sourced sprite/audio assets, designed tilemaps, coded 4 playable heroes, turn-based battle math, and player account save/load data serialization.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Unity 2D</span>
-                <span class="tech-tag">C#</span>
-                <span class="tech-tag">Turn-Based Combat</span>
-                <span class="tech-tag">Tilemap Architecture</span>
-                <span class="tech-tag">Data Serialization</span>
-                <span class="tech-tag">Sprite Pipeline</span>
-              </div>
+          <!-- Card 5: Final Fantasy RPG Capstone -->
+          <div class="secondary-card reveal-on-scroll delay-3">
+            <div class="sec-category-label" data-i18n="projects.p5Role">Capstone Thesis</div>
+            <h4 class="sec-title" data-i18n="projects.p5Title">Final Fantasy-Style 2D RPG</h4>
+            <p class="sec-desc" data-i18n="projects.p5Desc">
+              Engineered 100% solo as both University Graduation Thesis and 6-month Internship Capstone at Gear Inc. Implemented tilemaps, 4 playable heroes, turn-based battle math, and full save/load data serialization.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">Unity 2D</span>
+              <span class="tech-capsule">Turn-Based Combat</span>
+              <span class="tech-capsule">Data Serialization</span>
+              <span class="tech-capsule">Tilemaps</span>
             </div>
           </div>
         </div>
 
-        <!-- Category 3: Side Projects & Portals -->
-        <div class="project-category-header">
-          <h3 class="project-category-title">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
-            <span data-i18n="projects.sideTitle">Studio Platforms & Web Tools</span>
-          </h3>
-          <p class="project-category-desc" data-i18n="projects.sideDesc">Interactive tournament portals and real-time platforms built for Gear Games.</p>
+        <!-- Group 3: Studio Web Platforms -->
+        <div class="projects-group-header reveal-on-scroll" style="margin-top: 4.5rem;">
+          <span class="projects-group-label" data-i18n="projects.platformsLabel">STUDIO PLATFORMS & TOOLS</span>
+          <span class="projects-group-line"></span>
         </div>
 
-        <div class="projects-grid">
+        <div class="secondary-projects-grid">
           <!-- Web 1: LoL Tournament -->
-          <div class="project-card">
-            <div class="project-media">
-              <img src="assets/projects/web-lol.png" alt="Gear Games LoL Tournament" class="project-media-img" />
+          <div class="secondary-card reveal-on-scroll delay-1">
+            <div class="sec-category-label" data-i18n="projects.p6Role">Web Platform</div>
+            <h4 class="sec-title" data-i18n="projects.p6Title">Gear Games LoL Championship</h4>
+            <p class="sec-desc" data-i18n="projects.p6Desc">
+              Interactive company tournament portal featuring real-time bracket propagation, automated group standings, match scheduling, and interactive Poro Easter eggs.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">Next.js</span>
+              <span class="tech-capsule">React</span>
+              <span class="tech-capsule">Tailwind</span>
             </div>
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.webP1Role">Full-stack Tournament Hub</div>
-              <h4 class="project-title" data-i18n="projects.webP1Title">Gear Games LoL Tournament</h4>
-              <p class="project-desc" data-i18n="projects.webP1Desc">
-                Interactive company League of Legends championship portal with live brackets, automated group standings, match scheduling, and custom ARAM Poro Easter eggs.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Vercel</span>
-              </div>
-              <div class="project-links">
-                <a href="https://gg-lol-tournament.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewSource">Live App</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                <a href="https://github.com/hungvdn1314/gg-lol-tournament" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewRepo">Source Code</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-action-links" style="margin-top: auto;">
+              <a href="https://gg-lol-tournament.vercel.app/" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.liveDemo">Live App</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/hungvdn1314/gg-lol-tournament" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.sourceCode">Source</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
             </div>
           </div>
 
           <!-- Web 2: Badminton Tournament -->
-          <div class="project-card">
-            <div class="project-media">
-              <img src="assets/projects/web-badminton.png" alt="Gear Games Badminton 2026" class="project-media-img" />
+          <div class="secondary-card reveal-on-scroll delay-2">
+            <div class="sec-category-label" data-i18n="projects.p7Role">Web Platform</div>
+            <h4 class="sec-title" data-i18n="projects.p7Title">Badminton Tournament 2026</h4>
+            <p class="sec-desc" data-i18n="projects.p7Desc">
+              Official tournament portal for studio championship with live court scoring, BWF rules integration, and doubles service rotation tracking.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">Vite</span>
+              <span class="tech-capsule">JavaScript</span>
+              <span class="tech-capsule">BWF Engine</span>
             </div>
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.webP2Role">Real-time Arena Portal</div>
-              <h4 class="project-title" data-i18n="projects.webP2Title">Gear Games Badminton 2026</h4>
-              <p class="project-desc" data-i18n="projects.webP2Desc">
-                Official tournament portal for internal badminton championship with real-time scoring, bracket propagation, BWF rules integration, and doubles service rotation assistant.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">Vite</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">BWF Rules Engine</span>
-                <span class="tech-tag">Vercel</span>
-              </div>
-              <div class="project-links">
-                <a href="https://badminton-tournament-gear.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewSource">Live App</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                <a href="https://github.com/hungvdn1314/badminton_tournament" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewRepo">Source Code</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-action-links" style="margin-top: auto;">
+              <a href="https://badminton-tournament-gear.vercel.app/" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.liveDemo">Live App</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/hungvdn1314/badminton_tournament" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.sourceCode">Source</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
             </div>
           </div>
 
           <!-- Web 3: Velvet Vines -->
-          <div class="project-card">
-            <div class="project-media">
-              <img src="assets/projects/web-velvet.png" alt="Velvet Vines" class="project-media-img" />
+          <div class="secondary-card reveal-on-scroll delay-3">
+            <div class="sec-category-label" data-i18n="projects.p8Role">Interactive Web</div>
+            <h4 class="sec-title" data-i18n="projects.p8Title">Velvet Vines</h4>
+            <p class="sec-desc" data-i18n="projects.p8Desc">
+              Sleek, responsive party game and card-drinking web application designed for social gatherings with fluid micro-animations.
+            </p>
+            <div class="tech-capsule-row">
+              <span class="tech-capsule">React</span>
+              <span class="tech-capsule">CSS Motion</span>
+              <span class="tech-capsule">Mobile Web</span>
             </div>
-            <div class="project-content">
-              <div class="project-role" data-i18n="projects.webP3Role">Interactive Web Experience</div>
-              <h4 class="project-title" data-i18n="projects.webP3Title">Velvet Vines</h4>
-              <p class="project-desc" data-i18n="projects.webP3Desc">
-                Sleek, responsive party game and card-drinking web application designed for social gatherings with fluid micro-animations.
-              </p>
-              <div class="project-tech-tags">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Vite</span>
-                <span class="tech-tag">CSS Animations</span>
-                <span class="tech-tag">Mobile Web</span>
-                <span class="tech-tag">Vercel</span>
-              </div>
-              <div class="project-links">
-                <a href="https://velvet-vines.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewSource">Live App</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                <a href="https://github.com/hungvdn1314/velvet-vines" target="_blank" rel="noopener noreferrer" class="project-link-btn">
-                  <span data-i18n="projects.viewRepo">Source Code</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-              </div>
+            <div class="project-action-links" style="margin-top: auto;">
+              <a href="https://velvet-vines.vercel.app/" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.liveDemo">Live App</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://github.com/hungvdn1314/velvet-vines" target="_blank" rel="noopener noreferrer" class="action-link">
+                <span data-i18n="projects.sourceCode">Source</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- Engineering Competencies Section (Replacing Bento Pill Slop) -->
+    <!-- Engineering Competencies — Asymmetric Bento Grid -->
     <section id="skills" class="skills">
       <div class="container">
-        <div class="section-tag" data-i18n="skills.tag">CORE COMPETENCIES</div>
-        <h2 class="section-title" data-i18n="skills.title">Engineering Focus</h2>
-        <p class="section-desc" data-i18n="skills.desc">Specialized disciplines across gameplay mechanics, deterministic networking, engine profiling, and native infrastructure.</p>
+        <div class="section-tag reveal-on-scroll" data-i18n="skills.tag">ENGINEERING FOCUS</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="skills.title">Core Competencies</h2>
+        <p class="section-desc reveal-on-scroll" data-i18n="skills.desc">Specialized disciplines spanning deterministic networking, core gameplay mechanics, memory profiling, and native platform integration.</p>
 
-        <div class="competencies-grid">
-          <!-- Card 1: Gameplay Systems & Math -->
-          <div class="competency-card">
-            <div class="competency-header">
-              <div class="competency-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-              </div>
-              <h3 class="competency-title" data-i18n="skills.comp1Title">Gameplay Systems & Math</h3>
-            </div>
-            <p class="competency-desc" data-i18n="skills.comp1Desc">
-              Turn-based combat formulas, finite state machines, algorithmic match-3 solvers, animation timeline choreographies, input buffering, and modular gear architectures.
-            </p>
-            <div class="competency-skills-label">Core Technologies</div>
-            <div class="competency-pills">
-              <span class="comp-pill">C# (.NET)</span>
-              <span class="comp-pill">Finite State Machines</span>
-              <span class="comp-pill">Turn-Based Combat Math</span>
-              <span class="comp-pill">Match-3 Grid Solvers</span>
-              <span class="comp-pill">Animation Timelines</span>
-              <span class="comp-pill">Input Buffering</span>
-            </div>
-          </div>
-
-          <!-- Card 2: Deterministic Multiplayer & Engines -->
-          <div class="competency-card">
-            <div class="competency-header">
-              <div class="competency-icon">
+        <div class="bento-grid">
+          
+          <!-- Card 1: Featured Wide Card -->
+          <div class="bento-card bento-featured reveal-on-scroll">
+            <div class="bento-header">
+              <div class="bento-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
               </div>
-              <h3 class="competency-title" data-i18n="skills.comp2Title">Deterministic Multiplayer & Engines</h3>
+              <h3 class="bento-title" data-i18n="skills.comp1Title">Gameplay Architecture & Combat Systems</h3>
             </div>
-            <p class="competency-desc" data-i18n="skills.comp2Desc">
-              Tick-based lockstep simulation, deterministic physics concepts, Photon Quantum prototype integration, and memory-conscious component lifecycles in Unity 2D/3D.
+            <p class="bento-body" data-i18n="skills.comp1Desc">
+              Turn-based damage formulas, finite state machines, algorithmic match-3 solvers, animation timeline choreographies, input buffering, and modular gear stat progression.
             </p>
-            <div class="competency-skills-label">Core Technologies</div>
-            <div class="competency-pills">
-              <span class="comp-pill">Unity 2D / 3D</span>
-              <span class="comp-pill">Photon Quantum</span>
-              <span class="comp-pill">Deterministic Physics</span>
-              <span class="comp-pill">Lockstep Netcode</span>
-              <span class="comp-pill">ECS Architecture</span>
-              <span class="comp-pill">Addressables</span>
+            <div class="bento-pill-group">
+              <span class="bento-pill">C# (.NET)</span>
+              <span class="bento-pill">Finite State Machines (FSM)</span>
+              <span class="bento-pill">Turn-Based Combat Math</span>
+              <span class="bento-pill">Match-3 Grid Solvers</span>
+              <span class="bento-pill">Animation Timelines</span>
+              <span class="bento-pill">Input Buffering</span>
+              <span class="bento-pill">Modular Gear Systems</span>
             </div>
           </div>
 
-          <!-- Card 3: Engine Profiling & Optimization -->
-          <div class="competency-card">
-            <div class="competency-header">
-              <div class="competency-icon">
+          <!-- Card 2: Deterministic Netcode -->
+          <div class="bento-card reveal-on-scroll delay-1">
+            <div class="bento-header">
+              <div class="bento-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+              </div>
+              <h3 class="bento-title" data-i18n="skills.comp2Title">Deterministic Multiplayer & Engine Tech</h3>
+            </div>
+            <p class="bento-body" data-i18n="skills.comp2Desc">
+              Tick-based lockstep simulation, deterministic physics concepts, Photon Quantum rollback prototype integration, and memory-conscious component lifecycles in Unity 2D/3D.
+            </p>
+            <div class="bento-pill-group">
+              <span class="bento-pill">Photon Quantum</span>
+              <span class="bento-pill">Lockstep Netcode</span>
+              <span class="bento-pill">Deterministic Physics</span>
+              <span class="bento-pill">ECS Principles</span>
+              <span class="bento-pill">Unity 2D / 3D</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Profiling & Optimization -->
+          <div class="bento-card reveal-on-scroll delay-2">
+            <div class="bento-header">
+              <div class="bento-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
               </div>
-              <h3 class="competency-title" data-i18n="skills.comp3Title">Engine Profiling & Optimization</h3>
+              <h3 class="bento-title" data-i18n="skills.comp3Title">Engine Profiling & Performance</h3>
             </div>
-            <p class="competency-desc" data-i18n="skills.comp3Desc">
-              Diagnosing CPU/GPU bottlenecks using Unity Memory Profiler and Frame Debugger, draw call reduction via GPU batching, dynamic UGUI canvas isolation, and Addressables.
+            <p class="bento-body" data-i18n="skills.comp3Desc">
+              Diagnosing CPU/GPU bottlenecks with Unity Memory Profiler and Frame Debugger, GPU draw call batching, dynamic UGUI canvas isolation, and Addressables memory management.
             </p>
-            <div class="competency-skills-label">Core Technologies</div>
-            <div class="competency-pills">
-              <span class="comp-pill">Unity Memory Profiler</span>
-              <span class="comp-pill">Frame Debugger</span>
-              <span class="comp-pill">UGUI Hierarchy Optimization</span>
-              <span class="comp-pill">GPU Batching & Shaders</span>
-              <span class="comp-pill">Draw Call Reduction</span>
-              <span class="comp-pill">Xcode Instruments</span>
+            <div class="bento-pill-group">
+              <span class="bento-pill">Unity Memory Profiler</span>
+              <span class="bento-pill">Frame Debugger</span>
+              <span class="bento-pill">UGUI Isolation</span>
+              <span class="bento-pill">Draw Call Reduction</span>
+              <span class="bento-pill">Addressables</span>
             </div>
           </div>
 
-          <!-- Card 4: Infra, Tooling & Native Debugging -->
-          <div class="competency-card">
-            <div class="competency-header">
-              <div class="competency-icon">
+          <!-- Card 4: Platform Infra & SDKs -->
+          <div class="bento-card reveal-on-scroll delay-3" style="grid-column: span 2;">
+            <div class="bento-header">
+              <div class="bento-icon">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
               </div>
-              <h3 class="competency-title" data-i18n="skills.comp4Title">Infra, Tooling & Native Debugging</h3>
+              <h3 class="bento-title" data-i18n="skills.comp4Title">Platform Infrastructure & Native SDKs</h3>
             </div>
-            <p class="competency-desc" data-i18n="skills.comp4Desc">
-              Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry query filtering, macOS LiveOps desktop tools (Swift, Python), and fullstack web platforms (Next.js).
+            <p class="bento-body" data-i18n="skills.comp4Desc">
+              Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry query filtering, macOS LiveOps desktop tools (Swift, Python), and fullstack web tools (Next.js).
             </p>
-            <div class="competency-skills-label">Core Technologies</div>
-            <div class="competency-pills">
-              <span class="comp-pill">Splunk Telemetry</span>
-              <span class="comp-pill">Native SDK Triage (iOS/Android)</span>
-              <span class="comp-pill">Swift (macOS Tools)</span>
-              <span class="comp-pill">Python Automation</span>
-              <span class="comp-pill">Next.js & TypeScript</span>
-              <span class="comp-pill">CI/CD Pipelines</span>
+            <div class="bento-pill-group">
+              <span class="bento-pill">Native SDK Triage (iOS/Android)</span>
+              <span class="bento-pill">Splunk Telemetry</span>
+              <span class="bento-pill">Swift (macOS Tools)</span>
+              <span class="bento-pill">Python Automation</span>
+              <span class="bento-pill">Next.js & TypeScript</span>
+              <span class="bento-pill">Git / Git LFS</span>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Experience Timeline Section -->
-    <section id="experience" class="timeline">
+    <!-- Experience Section — Hybrid Featured Production Era + Collapsible Drawer -->
+    <section id="experience" class="experience">
       <div class="container">
-        <div class="section-tag" data-i18n="timeline.tag">CAREER PATH</div>
-        <h2 class="section-title" data-i18n="timeline.title">Experience & Milestones</h2>
+        <div class="section-tag reveal-on-scroll" data-i18n="experience.tag">CAREER PATH</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="experience.title">Experience & Milestones</h2>
+        <p class="section-desc reveal-on-scroll" data-i18n="experience.desc">4+ years of studio production, native infrastructure triage, and engineering leadership.</p>
 
-        <div class="timeline-track">
-          <!-- Item 1: Infra Engineer (Present) -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job1Date">Nov 2024 — 2026</div>
-              <h3 class="timeline-role" data-i18n="timeline.job1Role">Infra Engineer</h3>
-              <div class="timeline-company" data-i18n="timeline.job1Company">Gear Games</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job1Bullets.0">Diagnosed and resolved critical third-party SDK defects across In-App Purchases (IAP), Firebase, and Facebook SDK.</li>
-                <li data-i18n="timeline.job1Bullets.1">Filtered production crash signatures, telemetry, and distributed logs using Splunk queries to isolate root causes.</li>
-                <li data-i18n="timeline.job1Bullets.2">Maintained and developed macOS internal tools for Live Ops using Xcode, Swift, and Python; accelerated velocity with AI-augmented workflows.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 2: Custom Car Racing -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job2Date">Mar 2024 — Nov 2024</div>
-              <h3 class="timeline-role" data-i18n="timeline.job2Role">Client Engineer — Custom Car Racing</h3>
-              <div class="timeline-company" data-i18n="timeline.job2Company">Gear Games</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job2Bullets.0">Architected an extensible animation timeline framework for dynamic 3D vehicle customization and parts swapping.</li>
-                <li data-i18n="timeline.job2Bullets.1">Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.</li>
-                <li data-i18n="timeline.job2Bullets.2">Translated complex GDD mechanics into decoupled, testable gameplay modules.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 3: Idle Combat & Obstacles -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job3Date">Aug 2023 — Mar 2024</div>
-              <h3 class="timeline-role" data-i18n="timeline.job3Role">Client Engineer — Idle Combat & Obstacles</h3>
-              <div class="timeline-company" data-i18n="timeline.job3Company">Gear Games</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job3Bullets.0">Engineered physics interactions, trigger logic, and spatial hazards for moving obstacle courses.</li>
-                <li data-i18n="timeline.job3Bullets.1">Implemented autonomous character combat state machines, auto-attack sequencing, and modular gear stat progression.</li>
-                <li data-i18n="timeline.job3Bullets.2">Integrated combat feedback VFX (hit impacts, camera shakes) and responsive mobile HUD interfaces.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 4: Survival Prototype & Puzzle Strike -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job4Date">Nov 2021 — Aug 2023</div>
-              <h3 class="timeline-role" data-i18n="timeline.job4Role">Client Engineer — Survival Prototype & Puzzle Strike</h3>
-              <div class="timeline-company" data-i18n="timeline.job4Company">Gear Games</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job4Bullets.0">Phase 1 (Prototype): Implemented weapon ballistic mechanics, character skills, and combat hooks interacting with Photon Quantum.</li>
-                <li data-i18n="timeline.job4Bullets.1">Phase 2 (Released Title): Engineered core match-3 grid solver algorithms, cascading logic, and full turn-based combat damage/mana progression.</li>
-                <li data-i18n="timeline.job4Bullets.2">Integrated artist 3D character models into Unity, authored timeline choreography for skills and movements, and built responsive in-game UI/UX.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 5: Intern @ Gear Inc -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job5Date">Apr 2021 — Nov 2021</div>
-              <h3 class="timeline-role" data-i18n="timeline.job5Role">Client Engineer Intern</h3>
-              <div class="timeline-company" data-i18n="timeline.job5Company">Gear Inc</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job5Bullets.0">Engineered a Final Fantasy-inspired 2D RPG 100% solo as both University Graduation Thesis and 6-month Internship Capstone (art/audio, tilemaps, 4 heroes, combat, save/load).</li>
-                <li data-i18n="timeline.job5Bullets.1">Rebuilt classic titles (Flappy Bird, Gold Miner) to master Unity component lifecycles, design patterns, and team Git workflows.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 6: Enouvo Backend Intern -->
-          <div class="timeline-item">
-            <span class="timeline-node"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" data-i18n="timeline.job6Date">2020</div>
-              <h3 class="timeline-role" data-i18n="timeline.job6Role">Backend Developer Intern (OJT)</h3>
-              <div class="timeline-company" data-i18n="timeline.job6Company">Enouvo IT Solutions</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.job6Bullets.0">Collaborated under senior guidance to run API test suites using Postman and troubleshoot Node.js backend services.</li>
-                <li data-i18n="timeline.job6Bullets.1">Gained foundational server-side insights before strategically pivoting into interactive game client engineering.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 7: Education Greenwich -->
-          <div class="timeline-item">
-            <span class="timeline-node" style="border-color: var(--accent-amber);"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" style="color: var(--accent-amber);" data-i18n="timeline.edu1Date">2018 — 2022</div>
-              <h3 class="timeline-role" data-i18n="timeline.edu1Role">Bachelor of Information Technology</h3>
-              <div class="timeline-company" data-i18n="timeline.edu1Company">University of Greenwich Vietnam</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.edu1Bullets.0">Selected by Google Developers as one of the first 9 Google Developer Student Club (DSC) Leads across Vietnam.</li>
-                <li data-i18n="timeline.edu1Bullets.1">Represented Vietnam at Google DSC SEA Summit 2019 in Malaysia; spearheaded university tech bootcamps in Flutter, Firebase, and GCP.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Item 8: High School Le Quy Don -->
-          <div class="timeline-item">
-            <span class="timeline-node" style="border-color: var(--accent-amber);"></span>
-            <div class="timeline-card">
-              <div class="timeline-date" style="color: var(--accent-amber);" data-i18n="timeline.edu2Date">2015 — 2018</div>
-              <h3 class="timeline-role" data-i18n="timeline.edu2Role">Specialized in Informatics (Chuyên Tin)</h3>
-              <div class="timeline-company" data-i18n="timeline.edu2Company">Le Quy Don High School for the Gifted</div>
-              <ul class="timeline-bullets">
-                <li data-i18n="timeline.edu2Bullets.0">National Science & Technology Contest (KHKT Cấp Quốc Gia) Award for IoT Smart Fire & Air Early Warning System (Arduino, MQ-135, SIM900A).</li>
-                <li data-i18n="timeline.edu2Bullets.1">Co-developed Smart Assistive Glasses for motor-impaired users (head accelerometer mouse & voice STT); researched traffic density via OpenCV.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section (Clean Technical Profile) -->
-    <section id="about" class="about">
-      <div class="container about-grid">
-        <div class="about-visual">
-          <div class="about-spec-card">
-            <div class="about-spec-header" data-i18n="about.profileCardTitle">Technical Profile</div>
-            <div class="about-spec-list">
-              <div class="spec-item">
-                <div class="spec-item-label" data-i18n="about.specRoleLabel">Role</div>
-                <div class="spec-item-val" data-i18n="about.specRoleVal">Game Client & Infra Engineer</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-item-label" data-i18n="about.specExpLabel">Experience</div>
-                <div class="spec-item-val" data-i18n="about.specExpVal">4+ Years (Gear Games)</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-item-label" data-i18n="about.specFocusLabel">Core Focus</div>
-                <div class="spec-item-val" data-i18n="about.specFocusVal">Gameplay Systems, Deterministic Netcode, Native SDKs</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-item-label" data-i18n="about.specStatusLabel">Current Status</div>
-                <div class="spec-item-val" style="color: var(--accent-emerald);" data-i18n="about.specStatusVal">Open to New Opportunities</div>
-              </div>
-              <div class="spec-item">
-                <div class="spec-item-label" data-i18n="about.specEduLabel">Education</div>
-                <div class="spec-item-val" data-i18n="about.specEduVal">B.S. Computing · Greenwich Vietnam</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-text">
-          <div class="section-tag" data-i18n="about.tag">ENGINEERING PROFILE</div>
-          <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        <!-- Featured Production Era -->
+        <div class="experience-list">
           
-          <p class="lead-text" data-i18n="about.lead">
-            Game Client & Infra Engineer with 4+ years of production experience bridging core gameplay mechanics, deterministic multiplayer logic, and production SDK stability.
-          </p>
-
-          <p data-i18n="about.p1">
-            Over 4+ years at Gear Games, I served as both a Client Engineer and an Infra Engineer. My work spanned the full spectrum of game production: from architecting core combat algorithms, vehicle customization timelines, and obstacle hazard courses, to diagnosing deep native iOS/Android SDK defects (IAP, Firebase, Facebook SDK) and production telemetry in Splunk.
-          </p>
-
-          <p data-i18n="about.p2">
-            Earlier in my career, I was handpicked as one of the first 9 inaugural Google Developer Student Club (DSC) Leads in Vietnam, attending the 2019 Malaysia Summit. I hold a B.S. in Computing from the University of Greenwich Vietnam and graduated from the Informatics specialized class at Le Quy Don High School for the Gifted.
-          </p>
-
-          <div style="margin-top: 2rem;">
-            <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span data-i18n="nav.cv">Download CV</span>
-            </a>
+          <!-- Job 1: Infra Engineer -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job1Role">Infra Engineer</h3>
+              <span class="exp-date-badge" data-i18n="experience.job1Date">Nov 2024 — Present</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job1Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job1Bullets.0">Diagnosed and resolved critical third-party SDK defects across In-App Purchases (IAP), Firebase, and Facebook SDK.</li>
+              <li data-i18n="experience.job1Bullets.1">Filtered production crash signatures, telemetry, and distributed logs using Splunk queries to isolate root causes.</li>
+              <li data-i18n="experience.job1Bullets.2">Maintained and developed macOS internal tools for Live Ops using Xcode, Swift, and Python; accelerated velocity with AI-augmented workflows.</li>
+            </ul>
           </div>
+
+          <!-- Job 2: Custom Car Racing -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job2Role">Client Engineer — Custom Car Racing</h3>
+              <span class="exp-date-badge" data-i18n="experience.job2Date">Mar 2024 — Nov 2024</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job2Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job2Bullets.0">Architected an extensible animation timeline framework for dynamic 3D vehicle customization and parts swapping.</li>
+              <li data-i18n="experience.job2Bullets.1">Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.</li>
+              <li data-i18n="experience.job2Bullets.2">Translated complex GDD mechanics into decoupled, testable gameplay modules.</li>
+            </ul>
+          </div>
+
+          <!-- Job 3: Idle Combat & Obstacles -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job3Role">Client Engineer — Idle Combat & Obstacles</h3>
+              <span class="exp-date-badge" data-i18n="experience.job3Date">Aug 2023 — Mar 2024</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job3Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job3Bullets.0">Engineered physics interactions, trigger logic, and spatial hazards for moving obstacle courses.</li>
+              <li data-i18n="experience.job3Bullets.1">Implemented autonomous character combat state machines, auto-attack sequencing, and modular gear stat progression.</li>
+              <li data-i18n="experience.job3Bullets.2">Integrated combat feedback VFX (hit impacts, camera shakes) and responsive mobile HUD interfaces.</li>
+            </ul>
+          </div>
+
+          <!-- Job 4: Survival & Puzzle Strike -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job4Role">Client Engineer — Survival Prototype & Puzzle Strike</h3>
+              <span class="exp-date-badge" data-i18n="experience.job4Date">Nov 2021 — Aug 2023</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job4Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job4Bullets.0">Phase 1 (Prototype): Implemented weapon ballistic mechanics, character skills, and combat hooks interacting with Photon Quantum.</li>
+              <li data-i18n="experience.job4Bullets.1">Phase 2 (Released Title): Engineered core match-3 grid solver algorithms, cascading logic, and full turn-based combat damage/mana progression.</li>
+              <li data-i18n="experience.job4Bullets.2">Integrated artist 3D character models into Unity, authored timeline choreography for skills and movements, and built responsive in-game UI/UX.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Expandable Early Milestones Drawer -->
+        <div class="early-milestones-wrapper reveal-on-scroll">
+          <button id="toggle-early-milestones" class="toggle-milestones-btn" aria-expanded="false">
+            <span class="toggle-text" data-i18n="experience.toggleEarly">View Academic & Early Milestones (2015 — 2021)</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div id="early-milestones-container" class="early-milestones-container">
+            <!-- Milestone 1 -->
+            <div class="compact-milestone-row">
+              <div class="milestone-date" data-i18n="experience.m1Date">Apr 2021 — Nov 2021</div>
+              <div class="milestone-detail">
+                <h4 data-i18n="experience.m1Title">Client Engineer Intern @ Gear Inc</h4>
+                <p data-i18n="experience.m1Desc">Built a Final Fantasy-style 2D RPG 100% solo as both Graduation Thesis and Internship Capstone (combat, tilemaps, save/load data serialization).</p>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="compact-milestone-row">
+              <div class="milestone-date" data-i18n="experience.m2Date">2020</div>
+              <div class="milestone-detail">
+                <h4 data-i18n="experience.m2Title">Backend Developer Intern @ Enouvo IT Solutions</h4>
+                <p data-i18n="experience.m2Desc">Collaborated under senior guidance to run API test suites using Postman and troubleshoot Node.js backend services.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="compact-milestone-row">
+              <div class="milestone-date" data-i18n="experience.m3Date">2018 — 2022</div>
+              <div class="milestone-detail">
+                <h4 data-i18n="experience.m3Title">B.S. in Computing @ University of Greenwich Vietnam</h4>
+                <p data-i18n="experience.m3Desc">Selected as one of the first 9 Google Developer Student Club (DSC) Leads across Vietnam. Represented Vietnam at Google DSC SEA Summit 2019 in Malaysia.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="compact-milestone-row">
+              <div class="milestone-date" data-i18n="experience.m4Date">2015 — 2018</div>
+              <div class="milestone-detail">
+                <h4 data-i18n="experience.m4Title">Specialized in Informatics @ Le Quy Don High School for the Gifted</h4>
+                <p data-i18n="experience.m4Desc">National Science & Tech Award for IoT Early Warning System. Researched traffic density computer vision with OpenCV.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section — Profile Photo + Technical Profile & Journey -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-layout">
+          
+          <div class="profile-card-frame reveal-on-scroll">
+            <img src="assets/profile.jpg" alt="Vu Dinh Nghia Hung - IrrationaL" class="profile-photo" />
+            <div class="profile-footer-tag">
+              <div>
+                <div style="font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: #fff;" data-i18n="about.photoTag">Vu Dinh Nghia Hung // IrrationaL</div>
+                <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent);" data-i18n="about.photoRole">Game Client & Infra Engineer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-body-text reveal-on-scroll delay-1">
+            <div class="section-tag" data-i18n="about.tag">PROFILE</div>
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
+
+            <p class="lead-paragraph" data-i18n="about.lead">
+              Game Client & Infra Engineer with 4+ years of production experience bridging core gameplay mechanics, deterministic multiplayer logic, and production SDK stability.
+            </p>
+
+            <p data-i18n="about.p1">
+              Over 4+ years at Gear Games, I served as both a Client Engineer and an Infra Engineer. My work spanned the full spectrum of game production: from architecting core combat algorithms, vehicle customization timelines, and obstacle hazard courses, to diagnosing deep native iOS/Android SDK defects (IAP, Firebase, Facebook SDK) and production telemetry in Splunk.
+            </p>
+
+            <p data-i18n="about.p2">
+              Earlier in my career, I was handpicked as one of the first 9 inaugural Google Developer Student Club (DSC) Leads in Vietnam, attending the 2019 Malaysia Summit. I hold a B.S. in Computing from the University of Greenwich Vietnam and graduated from the Informatics specialized class at Le Quy Don High School for the Gifted.
+            </p>
+
+            <div style="margin-top: 2rem;">
+              <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span data-i18n="nav.cv">Download CV</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section — High-Impact Callout Card -->
     <section id="contact" class="contact">
       <div class="container">
-        <div class="section-tag" data-i18n="contact.tag">CONTACT</div>
-        <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
-        <p class="section-desc" data-i18n="contact.desc">Looking for a seasoned Unity engineer to build gameplay systems, optimize core performance, or engineer client infrastructure? Reach out directly.</p>
+        <div class="contact-cta-card reveal-on-scroll">
+          <div class="section-tag" data-i18n="contact.tag">GET IN TOUCH</div>
+          <h2 class="contact-cta-title" data-i18n="contact.title">Let's Build Something Exceptional</h2>
+          <p class="contact-cta-desc" data-i18n="contact.desc">
+            Looking for an experienced Unity engineer to architect gameplay systems, solve deterministic multiplayer netcode, or optimize production client infrastructure? Let's talk.
+          </p>
 
-        <div class="contact-grid">
-          <div class="contact-info">
-            <div class="contact-info-list">
-              <!-- Email -->
-              <div class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label" data-i18n="contact.emailLabel">Email</div>
-                  <a href="mailto:dsc.hungvdn@gmail.com" class="contact-info-val">dsc.hungvdn@gmail.com</a>
-                </div>
-              </div>
+          <div class="contact-actions-row">
+            <a href="mailto:dsc.hungvdn@gmail.com" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span data-i18n="contact.composeEmail">Transmit Direct Email</span>
+            </a>
 
-              <!-- Phone -->
-              <div class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label" data-i18n="contact.phoneLabel">Phone</div>
-                  <a href="tel:0915684515" class="contact-info-val">0915 684 515</a>
-                </div>
-              </div>
-
-              <!-- Location -->
-              <div class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label" data-i18n="contact.locationLabel">Location</div>
-                  <span class="contact-info-val">Da Nang, Vietnam</span>
-                </div>
-              </div>
-
-              <!-- Discord -->
-              <div class="contact-info-item">
-                <div class="contact-info-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6h0a14.5 14.5 0 0 0-4-1.25 10.9 10.9 0 0 0-.6 1.25 13.8 13.8 0 0 0-2.8 0A10.9 10.9 0 0 0 10 4.75 14.5 14.5 0 0 0 6 6a15.8 15.8 0 0 0-2.3 9.4 14.5 14.5 0 0 0 4.6 2.3 11.2 11.2 0 0 0 1-1.6 9.4 9.4 0 0 1-1.5-.7c.13-.1.25-.2.37-.3a10.4 10.4 0 0 0 9.7 0c.12.1.24.2.37.3a9.4 9.4 0 0 1-1.5.7 11.2 11.2 0 0 0 1 1.6 14.5 14.5 0 0 0 4.6-2.3A15.8 15.8 0 0 0 18 6z"></path><circle cx="9.5" cy="12" r="1.5"></circle><circle cx="14.5" cy="12" r="1.5"></circle></svg>
-                </div>
-                <div>
-                  <div class="contact-info-label" data-i18n="contact.discordLabel">Discord</div>
-                  <button id="copy-discord-btn" class="contact-info-val" style="background:none; border:none; padding:0; cursor:pointer; font-family:inherit; text-align:left; color: var(--sky-accent);">
-                    irrational_ (click to copy)
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="social-links-bar">
-              <a href="https://github.com/hungvdn1314" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              </a>
-              <a href="https://www.linkedin.com/in/hungvdn/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-              </a>
-              <a href="https://www.facebook.com/os1risdem14n/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-              </a>
-            </div>
+            <button id="copy-discord-btn" class="btn-discord-copy" title="Click to copy Discord tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6h0a14.5 14.5 0 0 0-4-1.25 10.9 10.9 0 0 0-.6 1.25 13.8 13.8 0 0 0-2.8 0A10.9 10.9 0 0 0 10 4.75 14.5 14.5 0 0 0 6 6a15.8 15.8 0 0 0-2.3 9.4 14.5 14.5 0 0 0 4.6 2.3 11.2 11.2 0 0 0 1-1.6 9.4 9.4 0 0 1-1.5-.7c.13-.1.25-.2.37-.3a10.4 10.4 0 0 0 9.7 0c.12.1.24.2.37.3a9.4 9.4 0 0 1-1.5.7 11.2 11.2 0 0 0 1 1.6 14.5 14.5 0 0 0 4.6-2.3A15.8 15.8 0 0 0 18 6z"></path><circle cx="9.5" cy="12" r="1.5"></circle><circle cx="14.5" cy="12" r="1.5"></circle></svg>
+              <span data-i18n="contact.discordCopy">Discord: _irrational_</span>
+            </button>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form-card">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="sender-name" class="form-label" data-i18n="contact.formName">Your Name</label>
-                <input type="text" id="sender-name" class="form-input" required placeholder="John Doe" />
-              </div>
-              <div class="form-group">
-                <label for="sender-email" class="form-label" data-i18n="contact.formEmail">Your Email</label>
-                <input type="email" id="sender-email" class="form-input" required placeholder="john@example.com" />
-              </div>
-              <div class="form-group">
-                <label for="sender-message" class="form-label" data-i18n="contact.formMessage">Message / Project Brief</label>
-                <textarea id="sender-message" class="form-textarea" required placeholder="Tell me about your game or project..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%;" >
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                <span data-i18n="contact.sendBtn">Send Message</span>
-              </button>
-            </form>
+          <div class="social-strip">
+            <a href="https://github.com/hungvdn1314" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/hungvdn/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.facebook.com/os1risdem14n/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -754,11 +648,11 @@
           <span>&copy; 2026 IrrationaL. </span>
           <span data-i18n="footer.rights">All rights reserved.</span>
         </div>
-        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-          <span data-i18n="footer.designedBy">Designed & Engineered by IrrationaL (Vu Dinh Nghia Hung)</span>
-          <a href="https://github.com/hungvdn1314/portfolio" target="_blank" rel="noopener noreferrer" style="color: var(--text-dim); text-decoration: none; font-size: 0.8rem; font-family: var(--font-mono); display: inline-flex; align-items: center; gap: 0.35rem;" class="footer-repo-link">
+        <div style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <span data-i18n="footer.designedBy">Engineered by IrrationaL (Vu Dinh Nghia Hung)</span>
+          <a href="https://github.com/hungvdn1314/portfolio" target="_blank" rel="noopener noreferrer" class="footer-repo-link">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            <span>Source on GitHub</span>
+            <span data-i18n="footer.sourceCode">View Source on GitHub</span>
           </a>
         </div>
       </div>
@@ -766,7 +660,23 @@
 
   </div>
 
+  <!-- Video Modal for Puzzle Strike Gameplay Trailer -->
+  <div id="video-modal" class="video-modal">
+    <div id="video-modal-backdrop" class="video-modal-backdrop"></div>
+    <div class="video-modal-dialog">
+      <button id="video-modal-close" class="video-modal-close-btn" aria-label="Close video player">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        <span>ESC / Close</span>
+      </button>
+      <div class="video-frame-container">
+        <iframe id="video-modal-iframe" src="" title="Puzzle Strike Combat RPG Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
   <script src="js/i18n.js"></script>
+  <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
