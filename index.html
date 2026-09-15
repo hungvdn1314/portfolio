@@ -19,42 +19,42 @@
 
   <div class="content-wrapper">
 
-    <!-- Top Navigation Bar -->
+    <!-- Top Navigation Bar — Clean & Streamlined -->
     <header class="navbar">
       <div class="container nav-container">
-        <a href="#hero" class="brand-logo">
+        <a href="#hero" class="brand-logo" aria-label="IrrationaL Home">
           <span class="status-dot"></span>
           <span class="alias">IRRATIONAL</span>
-          <span class="sub-alias">// HƯNG VDN</span>
         </a>
 
         <nav>
           <ul class="nav-links">
             <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
-            <li><a href="#skills" class="nav-link" data-i18n="nav.competencies">Competencies</a></li>
             <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
-            <li><a href="#innovations" class="nav-link" data-i18n="nav.innovations">Hardware & R&D</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav.competencies">Skills</a></li>
+            <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
             <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
             <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </nav>
 
         <div class="nav-actions">
-          <!-- Live Theme Switcher (Amber <-> Cyan) -->
-          <button id="theme-toggle-btn" class="btn-theme" title="Toggle Accent Color (Amber / Cyan)">
-            <span class="theme-color-indicator"></span>
-            <span class="theme-label">Amber Accent</span>
+          <!-- Day / Night Theme Button (Amber for Day, Cyan for Night) -->
+          <button id="theme-toggle-btn" class="btn-daynight" title="Toggle Day/Night Accent" aria-label="Toggle Day / Night Accent">
+            <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <span class="theme-label">Day</span>
           </button>
 
-          <!-- Language Switcher (EN <-> VI) -->
-          <button id="lang-toggle" class="btn-lang" aria-label="Switch Language" title="Switch Language">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <!-- Language Switcher Capsule -->
+          <button id="lang-toggle" class="btn-lang-compact" aria-label="Switch Language" title="Switch Language">
             <span class="lang-text">VI</span>
           </button>
 
-          <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline btn-cv-nav">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            <span data-i18n="nav.cv">Download CV</span>
+          <!-- Compact CV Button -->
+          <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn-cv-compact" title="Download CV">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span data-i18n="nav.cv">CV</span>
           </a>
 
           <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation">
@@ -64,7 +64,7 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- 1. Hero Section -->
     <section id="hero" class="hero">
       <div class="container">
         <div class="hero-content-centered reveal-on-scroll">
@@ -122,7 +122,7 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- 2. Featured Projects (The Tangible Proof) -->
     <section id="projects" class="projects">
       <div class="container">
         <div class="section-tag reveal-on-scroll" data-i18n="projects.tag">PORTFOLIO & CASE STUDIES</div>
@@ -167,7 +167,7 @@
               </div>
 
               <div class="project-action-links">
-                <a href="#" id="play-puzzlestrike-trailer-link" class="action-link" onclick="document.getElementById('play-puzzlestrike-trailer').click(); return false;">
+                <a href="#" id="play-puzzlestrike-trailer-link" class="action-link">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
                   <span data-i18n="projects.watchTrailer">Watch Gameplay Trailer</span>
                 </a>
@@ -349,7 +349,90 @@
       </div>
     </section>
 
-    <!-- Engineering Competencies -->
+    <!-- 3. Career & Production Experience (Gear Games) -->
+    <section id="experience" class="experience">
+      <div class="container">
+        <div class="section-tag reveal-on-scroll" data-i18n="experience.tag">CAREER TIMELINE</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="experience.title">Experience & Production Roles</h2>
+        <p class="section-desc reveal-on-scroll" data-i18n="experience.desc">4+ years of game engineering, native SDK stability, and developer tools at Gear Games.</p>
+
+        <div class="experience-list">
+          
+          <!-- Job 1: Infra Engineer -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job1Role">Infra Engineer</h3>
+              <span class="exp-date-badge" data-i18n="experience.job1Date">Nov 2024 — 2026</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job1Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job1Bullets.0">Fixed tricky multi-platform SDK bugs across In-App Purchases (receipt validation timeouts), Firebase (remote config latency), and Facebook SDK (token lifecycles, event tracking drops).</li>
+              <li data-i18n="experience.job1Bullets.1">Wrote Splunk search queries to filter crash signatures and memory anomalies on live builds; traced execution paths to isolate native memory faults and deadlocks.</li>
+              <li data-i18n="experience.job1Bullets.2">Maintained and built internal desktop utilities for the Live Ops team using Xcode, Swift, and Python, adding automated asset compilation and build config checkers.</li>
+              <li data-i18n="experience.job1Bullets.3">Used modern AI development tools for technical research, test planning, refactoring, and generating automated unit tests.</li>
+            </ul>
+          </div>
+
+          <!-- Job 2: Custom Car Racing -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job2Role">Client Engineer — Custom Car Racing 3D</h3>
+              <span class="exp-date-badge" data-i18n="experience.job2Date">Mar 2024 — Nov 2024</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job2Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job2Bullets.0">Built a modular car customization framework for swapping parts (rims, spoilers, body kits, vinyls) and tuning color grading in 3D.</li>
+              <li data-i18n="experience.job2Bullets.1">Created timeline sequences for garage camera choreography, part inspection zooms, and car reveal shots.</li>
+              <li data-i18n="experience.job2Bullets.2">Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.</li>
+            </ul>
+          </div>
+
+          <!-- Job 3: Idle Combat & Obstacles -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job3Role">Client Engineer — Idle Combat & Obstacle Prototype</h3>
+              <span class="exp-date-badge" data-i18n="experience.job3Date">Aug 2023 — Mar 2024</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job3Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job3Bullets.0">Wrote trigger volumes and physics interaction code for moving obstacles and timed platforms.</li>
+              <li data-i18n="experience.job3Bullets.1">Built character state machines (FSM) that handle auto-attack rotations, skill cooldown priorities, and pathing around arena obstacles.</li>
+              <li data-i18n="experience.job3Bullets.2">Designed a modular gear framework with dynamic stat calculations, hit-stop camera VFX, and responsive mobile HUDs.</li>
+            </ul>
+          </div>
+
+          <!-- Job 4: Survival & Puzzle Strike -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job4Role">Client Engineer — Survival Prototype & Puzzle Strike</h3>
+              <span class="exp-date-badge" data-i18n="experience.job4Date">Nov 2021 — Aug 2023</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job4Company">Gear Games · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job4Bullets.0">Stage 1 (Prototype): Wrote weapon ballistics, character skills, and combat hooks for a multiplayer survival prototype running on Photon Quantum; fixed logic desyncs in Unity.</li>
+              <li data-i18n="experience.job4Bullets.1">Stage 2 (Released Title): Primary client owner for the commercial release of Puzzle Strike: Combat RPG. Wrote match-3 grid logic, cascade gravity, combo multipliers, and turn-based combat damage/mana math.</li>
+              <li data-i18n="experience.job4Bullets.2">Integrated 3D character models into Unity, choreographed skill timelines and camera shots, and designed mobile UGUI screens with optimized draw calls.</li>
+            </ul>
+          </div>
+
+          <!-- Job 5: Client Engineer Intern -->
+          <div class="exp-card reveal-on-scroll">
+            <div class="exp-top-row">
+              <h3 class="exp-role-title" data-i18n="experience.job5Role">Client Engineer Intern</h3>
+              <span class="exp-date-badge" data-i18n="experience.job5Date">Apr 2021 — Nov 2021</span>
+            </div>
+            <div class="exp-company" data-i18n="experience.job5Company">Gear Inc · Da Nang, Vietnam</div>
+            <ul class="exp-bullets">
+              <li data-i18n="experience.job5Bullets.0">Built a solo Final Fantasy-inspired 2D RPG as both University Graduation Thesis and 6-month internship capstone (combat math, tilemaps, 4 heroes, save/load serialization).</li>
+              <li data-i18n="experience.job5Bullets.1">Re-engineered classic arcade titles (Flappy Bird, Gold Miner) from scratch to master Unity component lifecycles and physics bounding.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Engineering Competencies & Tech Stack -->
     <section id="skills" class="skills">
       <div class="container">
         <div class="section-tag reveal-on-scroll" data-i18n="skills.tag">TECHNICAL STACK</div>
@@ -447,129 +530,50 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- 5. Education & Honors (Separated Prestigious Credentials) -->
+    <section id="education" class="education">
       <div class="container">
-        <div class="section-tag reveal-on-scroll" data-i18n="experience.tag">CAREER TIMELINE</div>
-        <h2 class="section-title reveal-on-scroll" data-i18n="experience.title">Experience & Production Roles</h2>
-        <p class="section-desc reveal-on-scroll" data-i18n="experience.desc">4+ years of game engineering, native SDK stability, and developer tools at Gear Games.</p>
+        <div class="section-tag reveal-on-scroll" data-i18n="education.tag">ACADEMIC & HONORS</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="education.title">Education & Leadership</h2>
+        <p class="section-desc reveal-on-scroll" data-i18n="education.desc">Foundational computer science degrees and competitive achievements.</p>
 
-        <!-- Featured Production Era -->
-        <div class="experience-list">
+        <div class="credentials-grid">
           
-          <!-- Job 1: Infra Engineer -->
-          <div class="exp-card reveal-on-scroll">
-            <div class="exp-top-row">
-              <h3 class="exp-role-title" data-i18n="experience.job1Role">Infra Engineer</h3>
-              <span class="exp-date-badge" data-i18n="experience.job1Date">Nov 2024 — 2026</span>
+          <!-- Card 1: University of Greenwich -->
+          <div class="credential-card reveal-on-scroll">
+            <div class="credential-badge-row">
+              <span class="credential-honor-pill" data-i18n="education.edu1Honor">Google DSC Lead (Inaugural Cohort)</span>
+              <span class="credential-date" data-i18n="education.edu1Date">2018 — 2022</span>
             </div>
-            <div class="exp-company" data-i18n="experience.job1Company">Gear Games · Da Nang, Vietnam</div>
-            <ul class="exp-bullets">
-              <li data-i18n="experience.job1Bullets.0">Fixed tricky multi-platform SDK bugs across In-App Purchases (receipt validation timeouts), Firebase (remote config latency), and Facebook SDK (token lifecycles, event tracking drops).</li>
-              <li data-i18n="experience.job1Bullets.1">Wrote Splunk search queries to filter crash signatures and memory anomalies on live builds; traced execution paths to isolate native memory faults and deadlocks.</li>
-              <li data-i18n="experience.job1Bullets.2">Maintained and built internal desktop utilities for the Live Ops team using Xcode, Swift, and Python, adding automated asset compilation and build config checkers.</li>
-              <li data-i18n="experience.job1Bullets.3">Used modern AI development tools for technical research, test planning, refactoring, and generating automated unit tests.</li>
-            </ul>
+            <h3 class="credential-institution" data-i18n="education.edu1School">University of Greenwich Vietnam</h3>
+            <div class="credential-degree" data-i18n="education.edu1Degree">B.S. in Computing</div>
+            <p class="credential-desc" data-i18n="education.edu1Desc">
+              Selected by Google Developers as one of the first 9 pioneering DSC Leads across Vietnam. Represented the university at the Google DSC SEA Summit 2019 in Kuala Lumpur, Malaysia. Organized hands-on technical workshops in Flutter, Firebase, and cloud technologies.
+            </p>
           </div>
 
-          <!-- Job 2: Custom Car Racing -->
-          <div class="exp-card reveal-on-scroll">
-            <div class="exp-top-row">
-              <h3 class="exp-role-title" data-i18n="experience.job2Role">Client Engineer — Custom Car Racing 3D</h3>
-              <span class="exp-date-badge" data-i18n="experience.job2Date">Mar 2024 — Nov 2024</span>
+          <!-- Card 2: Le Quy Don Gifted High School -->
+          <div class="credential-card reveal-on-scroll delay-1">
+            <div class="credential-badge-row">
+              <span class="credential-honor-pill" data-i18n="education.edu2Honor">National KHKT Award & City HSG</span>
+              <span class="credential-date" data-i18n="education.edu2Date">2015 — 2018</span>
             </div>
-            <div class="exp-company" data-i18n="experience.job2Company">Gear Games · Da Nang, Vietnam</div>
-            <ul class="exp-bullets">
-              <li data-i18n="experience.job2Bullets.0">Built a modular car customization framework for swapping parts (rims, spoilers, body kits, vinyls) and tuning color grading in 3D.</li>
-              <li data-i18n="experience.job2Bullets.1">Created timeline sequences for garage camera choreography, part inspection zooms, and car reveal shots.</li>
-              <li data-i18n="experience.job2Bullets.2">Refactored UI views and shaders to minimize draw calls and optimize GPU batching across mobile hardware.</li>
-            </ul>
-          </div>
-
-          <!-- Job 3: Idle Combat & Obstacles -->
-          <div class="exp-card reveal-on-scroll">
-            <div class="exp-top-row">
-              <h3 class="exp-role-title" data-i18n="experience.job3Role">Client Engineer — Idle Combat & Obstacle Prototype</h3>
-              <span class="exp-date-badge" data-i18n="experience.job3Date">Aug 2023 — Mar 2024</span>
-            </div>
-            <div class="exp-company" data-i18n="experience.job3Company">Gear Games · Da Nang, Vietnam</div>
-            <ul class="exp-bullets">
-              <li data-i18n="experience.job3Bullets.0">Wrote trigger volumes and physics interaction code for moving obstacles and timed platforms.</li>
-              <li data-i18n="experience.job3Bullets.1">Built character state machines (FSM) that handle auto-attack rotations, skill cooldown priorities, and pathing around arena obstacles.</li>
-              <li data-i18n="experience.job3Bullets.2">Designed a modular gear framework with dynamic stat calculations, hit-stop camera VFX, and responsive mobile HUDs.</li>
-            </ul>
-          </div>
-
-          <!-- Job 4: Survival & Puzzle Strike -->
-          <div class="exp-card reveal-on-scroll">
-            <div class="exp-top-row">
-              <h3 class="exp-role-title" data-i18n="experience.job4Role">Client Engineer — Survival Prototype & Puzzle Strike</h3>
-              <span class="exp-date-badge" data-i18n="experience.job4Date">Nov 2021 — Aug 2023</span>
-            </div>
-            <div class="exp-company" data-i18n="experience.job4Company">Gear Games · Da Nang, Vietnam</div>
-            <ul class="exp-bullets">
-              <li data-i18n="experience.job4Bullets.0">Stage 1 (Prototype): Wrote weapon ballistics, character skills, and combat hooks for a multiplayer survival prototype running on Photon Quantum; fixed logic desyncs in Unity.</li>
-              <li data-i18n="experience.job4Bullets.1">Stage 2 (Released Title): Primary client owner for the commercial release of Puzzle Strike: Combat RPG. Wrote match-3 grid logic, cascade gravity, combo multipliers, and turn-based combat damage/mana math.</li>
-              <li data-i18n="experience.job4Bullets.2">Integrated 3D character models into Unity, choreographed skill timelines and camera shots, and designed mobile UGUI screens with optimized draw calls.</li>
-            </ul>
+            <h3 class="credential-institution" data-i18n="education.edu2School">Le Quy Don High School for the Gifted</h3>
+            <div class="credential-degree" data-i18n="education.edu2Degree">Specialized in Computer Science (Chuyên Tin)</div>
+            <p class="credential-desc" data-i18n="education.edu2Desc">
+              Won a National Award at the National Science & Technology Contest (KHKT Cấp Quốc Gia) for an embedded IoT early warning system, along with multiple City awards in High School Informatics Olympiads. Built strong foundations in algorithms, data structures, and mathematical modeling.
+            </p>
           </div>
 
         </div>
-
-        <!-- Expandable Early Milestones Drawer -->
-        <div class="early-milestones-wrapper reveal-on-scroll">
-          <button id="toggle-early-milestones" class="toggle-milestones-btn" aria-expanded="false">
-            <span class="toggle-text" data-i18n="experience.toggleEarly">View Academic & Early Milestones (2015 — 2021)</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-
-          <div id="early-milestones-container" class="early-milestones-container">
-            <!-- Milestone 1 -->
-            <div class="compact-milestone-row">
-              <div class="milestone-date" data-i18n="experience.m1Date">Apr 2021 — Nov 2021</div>
-              <div class="milestone-detail">
-                <h4 data-i18n="experience.m1Title">Client Engineer Intern @ Gear Inc (6 Months)</h4>
-                <p data-i18n="experience.m1Desc">Built a solo Final Fantasy-inspired 2D RPG as both University Graduation Thesis and 6-month internship capstone (combat math, tilemaps, 4 heroes, save/load serialization). Re-created Flappy Bird and Gold Miner from scratch.</p>
-              </div>
-            </div>
-
-            <!-- Milestone 2 -->
-            <div class="compact-milestone-row">
-              <div class="milestone-date" data-i18n="experience.m2Date">2020</div>
-              <div class="milestone-detail">
-                <h4 data-i18n="experience.m2Title">Backend Developer Intern @ Enouvo IT Solutions</h4>
-                <p data-i18n="experience.m2Desc">University OJT internship. Wrote API test suites in Postman and fixed backend bugs in Node.js, realizing I wanted to work in graphics and game client engineering.</p>
-              </div>
-            </div>
-
-            <!-- Milestone 3 -->
-            <div class="compact-milestone-row">
-              <div class="milestone-date" data-i18n="experience.m3Date">2018 — 2022</div>
-              <div class="milestone-detail">
-                <h4 data-i18n="experience.m3Title">B.S. in Computing @ University of Greenwich Vietnam</h4>
-                <p data-i18n="experience.m3Desc">Selected as one of the first 9 Google Developer Student Club (DSC) Leads in Vietnam. Represented the university at the Google DSC SEA Summit 2019 in Kuala Lumpur, Malaysia. Ran bootcamps in Flutter, Firebase, and GCP.</p>
-              </div>
-            </div>
-
-            <!-- Milestone 4 -->
-            <div class="compact-milestone-row">
-              <div class="milestone-date" data-i18n="experience.m4Date">2015 — 2018</div>
-              <div class="milestone-detail">
-                <h4 data-i18n="experience.m4Title">Specialized in Computer Science @ Le Quy Don Gifted High School</h4>
-                <p data-i18n="experience.m4Desc">Won a National Award at the National Science & Tech Contest (KHKT) for an IoT early warning device, along with multiple City awards in Informatics Olympiads. Built strong foundations in algorithms and mathematical modeling.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Early Innovations & Hardware R&D Section -->
+    <!-- 6. Early Innovations & Hardware R&D Section -->
     <section id="innovations" class="innovations" style="padding: 6.5rem 0; border-bottom: 1px solid var(--border-subtle);">
       <div class="container">
-        <div class="section-tag reveal-on-scroll" data-i18n="innovations.tag">ENGINEERING ROOTS</div>
-        <h2 class="section-title reveal-on-scroll" data-i18n="innovations.title">Early Innovations & Hardware R&D</h2>
+        <div class="section-tag reveal-on-scroll" data-i18n="innovations.tag">EARLY INNOVATIONS</div>
+        <h2 class="section-title reveal-on-scroll" data-i18n="innovations.title">Hardware R&D & Early Projects</h2>
         <p class="section-desc reveal-on-scroll" data-i18n="innovations.desc">Hardware and software projects from high school competitions and self-taught web development.</p>
 
         <div class="secondary-projects-grid">
@@ -634,7 +638,7 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- 7. About Me (Personal Narrative, Photo & Specs) -->
     <section id="about" class="about">
       <div class="container">
         <div class="about-layout">
@@ -691,7 +695,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- 8. Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
         <div class="contact-cta-card reveal-on-scroll">

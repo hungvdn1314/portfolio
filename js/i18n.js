@@ -1,6 +1,6 @@
 /**
  * IrrationaL Portfolio - Humanized Translation Engine (English & Vietnamese)
- * Rewritten using humanizer methodology: zero AI buzzwords, natural rhythm, direct engineering facts.
+ * Day/Night Accent Support, Separated Education & Honors, Streamlined Topbar
  */
 
 (function () {
@@ -10,12 +10,12 @@
     en: {
       nav: {
         projects: "Projects",
-        competencies: "Competencies",
         experience: "Experience",
-        innovations: "Hardware & R&D",
+        competencies: "Skills",
+        education: "Education",
         about: "About",
         contact: "Contact",
-        cv: "Download CV"
+        cv: "CV"
       },
       hero: {
         status: "EX-INFRA & GAME CLIENT ENGINEER · GEAR GAMES",
@@ -80,45 +80,10 @@
         p8Title: "Velvet Vines",
         p8Desc: "Responsive card-drinking and party game web app designed for mobile browsers with clean micro-animations."
       },
-      innovations: {
-        tag: "ENGINEERING ROOTS",
-        title: "Early Innovations & Hardware R&D",
-        desc: "Hardware and software projects from high school competitions and self-taught web development.",
-        inno1Role: "National Science & Tech Contest (KHKT) Award",
-        inno1Title: "Smart Fire & Air Pollution Early Warning System",
-        inno1Desc: "An IoT safety system detecting smoke, CO, and air pollutants using an MQ-135 sensor with moving-average filtering on an Arduino Uno. Displays air quality on a local 16x2 LCD with buzzer alarms and broadcasts emergency SMS through a SIM900A GSM module. Won a National Award at KHKT Cấp Quốc Gia and multiple City awards.",
-
-        inno2Role: "Wearable HCI Accessibility Prototype",
-        inno2Title: "Smart Assistive Glasses for Motor Impairment",
-        inno2Desc: "Co-built wearable assistive glasses enabling motor-impaired users to control computer cursors using head-movement accelerometer tracking and voice Speech-to-Text (STT) commands.",
-
-        inno3Role: "Computer Vision Research",
-        inno3Title: "Smart Traffic Light Optimization (OpenCV)",
-        inno3Desc: "Researched intersection traffic flow using OpenCV image processing and edge detection to estimate vehicle density and adjust traffic light signal cycles dynamically.",
-
-        inno4Role: "Self-Taught Webmaster",
-        inno4Title: "Self-Hosted Web & Online Communities (Grades 8–9)",
-        inno4Desc: "Taught myself domain DNS routing, Linux server administration, and forum setups (phpBB, vBulletin, WordPress, PHP/MySQL) in middle school, which got me into programming."
-      },
-      skills: {
-        tag: "TECHNICAL STACK",
-        title: "Skills & Architecture",
-        desc: "My daily technical toolkit across game engines, networking, native platforms, and profiling.",
-        comp1Title: "Gameplay Architecture & Combat Systems",
-        comp1Desc: "Turn-based damage formulas, Hierarchical & Finite State Machines (FSM), 2D grid spatial indexes, match-3 cascading solvers, animation timelines, and input buffering.",
-        comp2Title: "Game Engines & Deterministic Multiplayer",
-        comp2Desc: "Unity 2D/3D component lifecycles, Photon Quantum deterministic ECS in C# (zero allocations in the game loop, decoupled visual views), lockstep synchronization, fixed-tick physics, and desync fixes.",
-        comp3Title: "Engine Profiling & Optimization",
-        comp3Desc: "Tracking down bottlenecks using Unity Memory Profiler, Frame Debugger, Xcode Instruments (Time Profiler, Leaks, Allocations), Android GPU Inspector, GPU draw call batching, dynamic UGUI canvas isolation, and Addressables.",
-        comp4Title: "Languages, Native SDKs & Tooling",
-        comp4Desc: "Production C# (Linq-free hot loops, allocation tuning) and C++ (native plugins, memory pooling). Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry queries, macOS desktop tools in Swift/Xcode/Python, and CI/CD pipelines."
-      },
       experience: {
         tag: "CAREER TIMELINE",
         title: "Experience & Production Roles",
         desc: "4+ years of game engineering, native SDK stability, and developer tools at Gear Games.",
-        toggleEarly: "View Academic & Early Milestones (2015 — 2021)",
-        hideEarly: "Hide Academic & Early Milestones",
 
         job1Date: "Nov 2024 — 2026",
         job1Role: "Infra Engineer",
@@ -157,22 +122,69 @@
           "Integrated 3D character models into Unity, choreographed skill timelines and camera shots, and designed mobile UGUI screens with optimized draw calls."
         ],
 
-        // Compact Milestones
-        m1Date: "Apr 2021 — Nov 2021",
-        m1Title: "Client Engineer Intern @ Gear Inc (6 Months)",
-        m1Desc: "Built a solo Final Fantasy-inspired 2D RPG as both University Graduation Thesis and 6-month internship capstone (combat math, tilemaps, 4 heroes, save/load serialization). Re-created Flappy Bird and Gold Miner from scratch.",
+        job5Date: "Apr 2021 — Nov 2021",
+        job5Role: "Client Engineer Intern",
+        job5Company: "Gear Inc · Da Nang, Vietnam",
+        job5Bullets: [
+          "Built a solo Final Fantasy-inspired 2D RPG as both University Graduation Thesis and 6-month internship capstone (combat math, tilemaps, 4 heroes, save/load serialization).",
+          "Re-engineered classic arcade titles (Flappy Bird, Gold Miner) from scratch to master Unity component lifecycles and physics bounding."
+        ],
 
-        m2Date: "2020",
-        m2Title: "Backend Developer Intern @ Enouvo IT Solutions",
-        m2Desc: "University OJT internship. Wrote API test suites in Postman and fixed backend bugs in Node.js, realizing I wanted to work in graphics and game client engineering.",
+        job6Date: "2020",
+        job6Role: "Backend Developer Intern (University OJT)",
+        job6Company: "Enouvo IT Solutions · Da Nang, Vietnam",
+        job6Bullets: [
+          "Collaborated under senior guidance to run API test suites using Postman and troubleshoot Node.js backend services, which sparked my transition into interactive graphics and game client development."
+        ]
+      },
+      skills: {
+        tag: "TECHNICAL STACK",
+        title: "Skills & Architecture",
+        desc: "My daily technical toolkit across game engines, networking, native platforms, and profiling.",
+        comp1Title: "Gameplay Architecture & Combat Systems",
+        comp1Desc: "Turn-based damage formulas, Hierarchical & Finite State Machines (FSM), 2D grid spatial indexes, match-3 cascading solvers, animation timelines, and input buffering.",
+        comp2Title: "Game Engines & Deterministic Multiplayer",
+        comp2Desc: "Unity 2D/3D component lifecycles, Photon Quantum deterministic ECS in C# (zero allocations in the game loop, decoupled visual views), lockstep synchronization, fixed-tick physics, and desync fixes.",
+        comp3Title: "Engine Profiling & Optimization",
+        comp3Desc: "Tracking down bottlenecks using Unity Memory Profiler, Frame Debugger, Xcode Instruments (Time Profiler, Leaks, Allocations), Android GPU Inspector, GPU draw call batching, dynamic UGUI canvas isolation, and Addressables.",
+        comp4Title: "Languages, Native SDKs & Tooling",
+        comp4Desc: "Production C# (Linq-free hot loops, allocation tuning) and C++ (native plugins, memory pooling). Native iOS/Android SDK triage (IAP, Firebase, Facebook), Splunk telemetry queries, macOS desktop tools in Swift/Xcode/Python, and CI/CD pipelines."
+      },
+      education: {
+        tag: "ACADEMIC & HONORS",
+        title: "Education & Leadership",
+        desc: "Foundational computer science degrees and competitive achievements.",
+        edu1Honor: "Google DSC Lead (Inaugural Cohort)",
+        edu1Date: "2018 — 2022",
+        edu1School: "University of Greenwich Vietnam",
+        edu1Degree: "B.S. in Computing",
+        edu1Desc: "Selected by Google Developers as one of the first 9 pioneering DSC Leads across Vietnam. Represented the university at the Google DSC SEA Summit 2019 in Kuala Lumpur, Malaysia. Organized hands-on technical workshops in Flutter, Firebase, and cloud technologies.",
 
-        m3Date: "2018 — 2022",
-        m3Title: "B.S. in Computing @ University of Greenwich Vietnam",
-        m3Desc: "Selected as one of the first 9 Google Developer Student Club (DSC) Leads in Vietnam. Represented the university at the Google DSC SEA Summit 2019 in Kuala Lumpur, Malaysia. Ran bootcamps in Flutter, Firebase, and GCP.",
+        edu2Honor: "National KHKT Award & City HSG",
+        edu2Date: "2015 — 2018",
+        edu2School: "Le Quy Don High School for the Gifted",
+        edu2Degree: "Specialized in Computer Science (Chuyên Tin)",
+        edu2Desc: "Won a National Award at the National Science & Technology Contest (KHKT Cấp Quốc Gia) for an embedded IoT early warning system, along with multiple City awards in High School Informatics Olympiads. Built strong foundations in algorithms, data structures, and mathematical modeling."
+      },
+      innovations: {
+        tag: "EARLY INNOVATIONS",
+        title: "Hardware R&D & Early Projects",
+        desc: "Hardware and software projects from high school competitions and self-taught web development.",
+        inno1Role: "National Science & Tech Contest (KHKT) Award",
+        inno1Title: "Smart Fire & Air Pollution Early Warning System",
+        inno1Desc: "An IoT safety system detecting smoke, CO, and air pollutants using an MQ-135 sensor with moving-average filtering on an Arduino Uno. Displays air quality on a local 16x2 LCD with buzzer alarms and broadcasts emergency SMS through a SIM900A GSM module. Won a National Award at KHKT Cấp Quốc Gia and multiple City awards.",
 
-        m4Date: "2015 — 2018",
-        m4Title: "Specialized in Computer Science @ Le Quy Don Gifted High School",
-        m4Desc: "Won a National Award at the National Science & Tech Contest (KHKT) for an IoT early warning device, along with multiple City awards in Informatics Olympiads. Built strong foundations in algorithms and mathematical modeling."
+        inno2Role: "Wearable HCI Accessibility Prototype",
+        inno2Title: "Smart Assistive Glasses for Motor Impairment",
+        inno2Desc: "Co-built wearable assistive glasses enabling motor-impaired users to control computer cursors using head-movement accelerometer tracking and voice Speech-to-Text (STT) commands.",
+
+        inno3Role: "Computer Vision Research",
+        inno3Title: "Smart Traffic Light Optimization (OpenCV)",
+        inno3Desc: "Researched intersection traffic flow using OpenCV image processing and edge detection to estimate vehicle density and adjust traffic light signal cycles dynamically.",
+
+        inno4Role: "Self-Taught Webmaster",
+        inno4Title: "Self-Hosted Web & Online Communities (Grades 8–9)",
+        inno4Desc: "Taught myself domain DNS routing, Linux server administration, and forum setups (phpBB, vBulletin, WordPress, PHP/MySQL) in middle school, which got me into programming."
       },
       about: {
         tag: "ABOUT ME // PROFILE",
@@ -208,12 +220,12 @@
     vi: {
       nav: {
         projects: "Dự Án",
-        competencies: "Năng Lực",
         experience: "Kinh Nghiệm",
-        innovations: "Nghiên Cứu & R&D",
+        competencies: "Kỹ Năng",
+        education: "Học Vấn",
         about: "Giới Thiệu",
         contact: "Liên Hệ",
-        cv: "Tải CV"
+        cv: "CV"
       },
       hero: {
         status: "KỸ SƯ INFRA & GAME CLIENT · GEAR GAMES (4+ NĂM)",
@@ -275,45 +287,10 @@
         p8Title: "Velvet Vines",
         p8Desc: "Ứng dụng web trò chơi tiệc tùng và thẻ bài dành cho điện thoại với chuyển động mượt mà."
       },
-      innovations: {
-        tag: "NỀN TẢNG KỸ THUẬT",
-        title: "Dự Án Sáng Tạo Sớm & Phần Cứng R&D",
-        desc: "Các dự án phần cứng và phần mềm từ thời học Chuyên Lê Quý Đôn và giai đoạn tự học lập trình.",
-        inno1Role: "Giải Cuộc thi KHKT Cấp Quốc Gia",
-        inno1Title: "Thiết Bị Cảnh Báo Cháy & Ô Nhiễm Không Khí",
-        inno1Desc: "Hệ thống IoT phát hiện khí độc (khói, CO, benzen, cồn) bằng cảm biến MQ-135 và giải thuật lọc trung bình động trên Arduino Uno. Cảnh báo tại chỗ qua màn hình LCD 16x2 + còi báo động và gửi SMS khẩn cấp qua module SIM900A GSM/GPRS. Đoạt Giải Cấp Quốc Gia KHKT và nhiều Giải Nhất/Nhì cấp Thành phố.",
-
-        inno2Role: "Công Nghệ Hỗ Trợ Người Khuyết Tật",
-        inno2Title: "Kính Thông Minh Hỗ Trợ Người Khuyết Tật",
-        inno2Desc: "Đồng phát triển kính thông minh giúp người khuyết tật vận động điều khiển chuột máy tính bằng cảm biến gia tốc chuyển động đầu và thực hiện lệnh bằng giọng nói (Speech-to-Text).",
-
-        inno3Role: "Nghiên Cứu Thị Giác Máy Tính",
-        inno3Title: "Tối Ưu Hóa Đèn Giao Thông Thông Minh (OpenCV)",
-        inno3Desc: "Nghiên cứu ước tính mật độ phương tiện thời gian thực tại các ngã tư bằng xử lý ảnh OpenCV để tự động điều chỉnh chu kỳ đèn tín hiệu giao thông.",
-
-        inno4Role: "Tự Học Quản Trị Mạng & Web",
-        inno4Title: "Tự Quản Trị Domain, Hosting & Diễn Đàn (Lớp 8–9)",
-        inno4Desc: "Tự học cấu hình DNS, cài đặt hosting Linux, modding và quản trị các diễn đàn mã nguồn mở (phpBB, vBulletin, WordPress, PHP/MySQL) từ thời cấp 2."
-      },
-      skills: {
-        tag: "CHUYÊN MÔN KỸ THUẬT",
-        title: "Kỹ Năng & Kiến Trúc",
-        desc: "Bộ kỹ năng thực chiến được áp dụng hàng ngày qua các game engine, netcode, native SDK và profiler.",
-        comp1Title: "Kiến Trúc Gameplay & Hệ Thống Chiến Đấu",
-        comp1Desc: "Công thức giảm trừ sát thương turn-based, máy trạng thái (FSM/HSM), chia lưới tọa độ 2D, thuật toán match-3 rơi combo, timeline diễn hoạt và đệm dữ liệu phím bấm (input buffering).",
-        comp2Title: "Game Engine & Multiplayer Đồng Bộ (Deterministic)",
-        comp2Desc: "Vòng đời component Unity 2D/3D, mô phỏng ECS đồng bộ với Photon Quantum bằng C# (không cấp phát rác trong game loop, tách biệt hoàn toàn simulation và visual view), lockstep và phát hiện lệch mạng.",
-        comp3Title: "Phân Tích Hiệu Năng & Tối Ưu Engine",
-        comp3Desc: "Chẩn đoán điểm nghẽn CPU/GPU với Unity Memory Profiler, Frame Debugger, Xcode Instruments (Time Profiler, Leaks, Allocations), Android GPU Inspector, gom nhóm GPU batching, cô lập Canvas UGUI và Addressables.",
-        comp4Title: "Ngôn Ngữ Lập Trình, Native SDKs & Công Cụ",
-        comp4Desc: "Kinh nghiệm thực chiến với C# (tối ưu vòng lặp, kiểm soát bộ nhớ) và C++ (native plugin, memory pooling). Sửa lỗi Native iOS/Android SDK (IAP, Firebase, Facebook), truy vấn dữ liệu Splunk, viết tool macOS (Swift/Xcode/Python) và quy trình CI/CD."
-      },
       experience: {
         tag: "LỘ TRÌNH SỰ NGHIỆP",
         title: "Kinh Nghiệm & Vị Trí Sản Xuất",
         desc: "Hơn 4 năm thực chiến về kỹ thuật game, ổn định SDK native và phát triển công cụ hỗ trợ tại Gear Games.",
-        toggleEarly: "Xem các mốc học vấn & khởi đầu (2015 — 2021)",
-        hideEarly: "Ẩn các mốc khởi đầu & học vấn",
 
         job1Date: "11/2024 — 2026",
         job1Role: "Kỹ Sư Hạ Tầng (Infra Engineer)",
@@ -352,21 +329,69 @@
           "Đưa mô hình 3D vào Unity, dàn dựng timeline cho chiêu thức và góc máy, xây dựng giao diện mobile UGUI tối ưu draw call."
         ],
 
-        m1Date: "04/2021 — 11/2021",
-        m1Title: "Thực Tập Sinh Kỹ Sư Client @ Gear Inc (6 Tháng)",
-        m1Desc: "Tự tay phát triển game 2D RPG phong cách Final Fantasy độc lập 100% cho cả Đồ án tốt nghiệp Đại học Greenwich và Đồ án kết thúc thực tập tại Gear Inc (combat, tilemap, 4 nhân vật, lưu/tải dữ liệu). Viết lại 2 game kinh điển: Flappy Bird và Gold Miner.",
+        job5Date: "04/2021 — 11/2021",
+        job5Role: "Thực Tập Sinh Kỹ Sư Client",
+        job5Company: "Gear Inc · Đà Nẵng, Việt Nam",
+        job5Bullets: [
+          "Tự tay phát triển game 2D RPG phong cách Final Fantasy độc lập 100% cho cả Đồ án tốt nghiệp Đại học Greenwich và Đồ án kết thúc thực tập tại Gear Inc (combat, tilemap, 4 nhân vật, lưu/tải dữ liệu).",
+          "Tái lập trình 2 game kinh điển (Flappy Bird, Gold Miner) để làm chủ vòng đời component và vật lý va chạm trong Unity."
+        ],
 
-        m2Date: "2020",
-        m2Title: "Thực Tập Sinh Backend @ Enouvo IT Solutions",
-        m2Desc: "Thực tập OJT Đại học. Viết test API bằng Postman và gỡ lỗi dịch vụ backend Node.js, qua đó nhận ra niềm đam mê với đồ họa tương tác và game client.",
+        job6Date: "2020",
+        job6Role: "Thực Tập Sinh Backend (Thực tập OJT)",
+        job6Company: "Enouvo IT Solutions · Đà Nẵng, Việt Nam",
+        job6Bullets: [
+          "Viết test API bằng Postman và gỡ lỗi dịch vụ backend Node.js, qua đó nhận ra niềm đam mê với đồ họa tương tác và chuyển hướng sang game client."
+        ]
+      },
+      skills: {
+        tag: "CHUYÊN MÔN KỸ THUẬT",
+        title: "Kỹ Năng & Kiến Trúc",
+        desc: "Bộ kỹ năng thực chiến được áp dụng hàng ngày qua các game engine, netcode, native SDK và profiler.",
+        comp1Title: "Kiến Trúc Gameplay & Hệ Thống Chiến Đấu",
+        comp1Desc: "Công thức giảm trừ sát thương turn-based, máy trạng thái (FSM/HSM), chia lưới tọa độ 2D, thuật toán match-3 rơi combo, timeline diễn hoạt và đệm dữ liệu phím bấm (input buffering).",
+        comp2Title: "Game Engine & Multiplayer Đồng Bộ (Deterministic)",
+        comp2Desc: "Vòng đời component Unity 2D/3D, mô phỏng ECS đồng bộ với Photon Quantum bằng C# (không cấp phát rác trong game loop, tách biệt hoàn toàn simulation và visual view), lockstep và phát hiện lệch mạng.",
+        comp3Title: "Phân Tích Hiệu Năng & Tối Ưu Engine",
+        comp3Desc: "Chẩn đoán điểm nghẽn CPU/GPU với Unity Memory Profiler, Frame Debugger, Xcode Instruments (Time Profiler, Leaks, Allocations), Android GPU Inspector, gom nhóm GPU batching, cô lập Canvas UGUI và Addressables.",
+        comp4Title: "Ngôn Ngữ Lập Trình, Native SDKs & Công Cụ",
+        comp4Desc: "Kinh nghiệm thực chiến với C# (tối ưu vòng lặp, kiểm soát bộ nhớ) và C++ (native plugin, memory pooling). Sửa lỗi Native iOS/Android SDK (IAP, Firebase, Facebook), truy vấn dữ liệu Splunk, viết tool macOS (Swift/Xcode/Python) và quy trình CI/CD."
+      },
+      education: {
+        tag: "HỌC VẤN & THÀNH TÍCH",
+        title: "Học Vấn & Hoạt Động",
+        desc: "Nền tảng đào tạo chính quy về khoa học máy tính và các thành tích nổi bật.",
+        edu1Honor: "Google DSC Lead (Khoá Đầu Tiên)",
+        edu1Date: "2018 — 2022",
+        edu1School: "Đại Học Greenwich Việt Nam",
+        edu1Degree: "Cử Nhân Công Nghệ Thông Tin (B.S. Computing)",
+        edu1Desc: "Được Google Developers chọn là 1 trong 9 Leader đầu tiên của Google Developer Student Clubs tại Việt Nam. Đại diện tham dự Google DSC SEA Summit 2019 tại Malaysia. Tổ chức các buổi workshop thực chiến về Flutter, Firebase và công nghệ đám mây.",
 
-        m3Date: "2018 — 2022",
-        m3Title: "Cử Nhân CNTT @ Đại Học Greenwich Việt Nam",
-        m3Desc: "Được Google Developers chọn là 1 trong 9 Leader đầu tiên của Google Developer Student Clubs tại Việt Nam. Đại diện tham dự Google DSC SEA Summit 2019 tại Malaysia. Tổ chức các buổi workshop kỹ thuật về Flutter, Firebase và GCP.",
+        edu2Honor: "Giải KHKT Quốc Gia & HSG Thành Phố",
+        edu2Date: "2015 — 2018",
+        edu2School: "THPT Chuyên Lê Quý Đôn Đà Nẵng",
+        edu2Degree: "Chuyên Tin Học (Computer Science)",
+        edu2Desc: "Đoạt Giải Cấp Quốc Gia Cuộc thi Khoa học Kỹ thuật (KHKT) với Thiết bị IoT cảnh báo cháy sớm và ô nhiễm không khí, cùng nhiều Giải Nhất & Nhì Học sinh Giỏi Tin Học Đà Nẵng. Nền tảng thuật toán, cấu trúc dữ liệu và mô hình hóa toán học vững vàng."
+      },
+      innovations: {
+        tag: "DỰ ÁN SÁNG TẠO SỚM",
+        title: "Phần Cứng R&D & Dự Án Khởi Đầu",
+        desc: "Các dự án phần cứng và phần mềm từ thời học Chuyên Lê Quý Đôn và giai đoạn tự học lập trình.",
+        inno1Role: "Giải Cuộc thi KHKT Cấp Quốc Gia",
+        inno1Title: "Thiết Bị Cảnh Báo Cháy & Ô Nhiễm Không Khí",
+        inno1Desc: "Hệ thống IoT phát hiện khí độc (khói, CO, benzen, cồn) bằng cảm biến MQ-135 và giải thuật lọc trung bình động trên Arduino Uno. Cảnh báo tại chỗ qua màn hình LCD 16x2 + còi báo động và gửi SMS khẩn cấp qua module SIM900A GSM/GPRS. Đoạt Giải Cấp Quốc Gia KHKT và nhiều Giải Nhất/Nhì cấp Thành phố.",
 
-        m4Date: "2015 — 2018",
-        m4Title: "Chuyên Tin Học @ THPT Chuyên Lê Quý Đôn Đà Nẵng",
-        m4Desc: "Đoạt Giải Cấp Quốc Gia Cuộc thi Khoa học Kỹ thuật (KHKT) với Thiết bị cảnh báo cháy & chất lượng không khí. Nhiều Giải Nhất & Nhì Học sinh Giỏi Tin Học Đà Nẵng. Nền tảng thuật toán, cấu trúc dữ liệu và mô hình hóa toán học vững chắc."
+        inno2Role: "Công Nghệ Hỗ Trợ Người Khuyết Tật",
+        inno2Title: "Kính Thông Minh Hỗ Trợ Người Khuyết Tật",
+        inno2Desc: "Đồng phát triển kính thông minh giúp người khuyết tật vận động điều khiển chuột máy tính bằng cảm biến gia tốc chuyển động đầu và thực hiện lệnh bằng giọng nói (Speech-to-Text).",
+
+        inno3Role: "Nghiên Cứu Thị Giác Máy Tính",
+        inno3Title: "Tối Ưu Hóa Đèn Giao Thông Thông Minh (OpenCV)",
+        inno3Desc: "Nghiên cứu ước tính mật độ phương tiện thời gian thực tại các ngã tư bằng xử lý ảnh OpenCV để tự động điều chỉnh chu kỳ đèn tín hiệu giao thông.",
+
+        inno4Role: "Tự Học Quản Trị Mạng & Web",
+        inno4Title: "Tự Quản Trị Domain, Hosting & Diễn Đàn (Lớp 8–9)",
+        inno4Desc: "Tự học cấu hình DNS, cài đặt hosting Linux, modding và quản trị các diễn đàn mã nguồn mở (phpBB, vBulletin, WordPress, PHP/MySQL) từ thời cấp 2."
       },
       about: {
         tag: "VỀ BẢN THÂN // HỒ SƠ",
