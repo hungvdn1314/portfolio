@@ -106,7 +106,7 @@
     }
 
     const currentLang = document.documentElement.getAttribute('lang') || 'en';
-    const text = message || (currentLang === 'vi' ? 'Đã sao chép Discord ID (_irrational_)!' : 'Copied Discord ID (_irrational_) to clipboard!');
+    const text = message || (currentLang === 'vi' ? 'Đã sao chép Discord ID (irrational_) vào bộ nhớ tạm!' : 'Copied Discord ID (irrational_) to clipboard!');
 
     toast.innerHTML = `
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--accent, #f59e0b);">
@@ -126,7 +126,7 @@
 
   if (copyDiscordBtn) {
     copyDiscordBtn.addEventListener('click', () => {
-      const discordTag = '_irrational_';
+      const discordTag = 'irrational_';
       navigator.clipboard.writeText(discordTag).then(() => {
         showToast();
       }).catch(() => {
