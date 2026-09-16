@@ -84,7 +84,7 @@
         title: "Experience & Production Roles",
         desc: "4+ years of game engineering, native SDK stability, and developer tools at Gear Games.",
 
-        job1Date: "Nov 2024 — 2026",
+        job1Date: "Nov 2024 — Aug 2026",
         job1Role: "Infra Engineer",
         job1Company: "Gear Games · Da Nang, Vietnam",
         job1Bullets: [
@@ -285,7 +285,7 @@
         title: "Kinh Nghiệm & Vị Trí Sản Xuất",
         desc: "Hơn 4 năm thực chiến về kỹ thuật game, ổn định SDK native và phát triển công cụ hỗ trợ tại Gear Games.",
 
-        job1Date: "11/2024 — 2026",
+        job1Date: "11/2024 — 08/2026",
         job1Role: "Kỹ Sư Hạ Tầng (Infra Engineer)",
         job1Company: "Gear Games · Đà Nẵng, Việt Nam",
         job1Bullets: [
