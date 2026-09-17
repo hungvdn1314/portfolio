@@ -320,6 +320,7 @@ body {
   font-size: 0.78rem;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
   transition: var(--transition-snappy);
 }
 
@@ -1287,6 +1288,314 @@ body {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* ==========================================================================
+   CV VIEWER MODAL COMPONENT
+   Studio-grade technical document viewer for in-web inspection & export
+   ========================================================================== */
+.cv-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 10, 18, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.cv-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  height: min(92vh, 960px);
+  background: var(--bg-surface);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 28px 75px rgba(0, 0, 0, 0.75), 0 0 0 1px var(--border-subtle);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.97) translateY(8px);
+  transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-modal.active .cv-modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header Bar */
+.cv-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.35rem;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.cv-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.cv-modal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.cv-modal-titles {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.cv-modal-title {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cv-modal-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  padding: 0.18rem 0.55rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* Actions Toolbar */
+.cv-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+}
+
+/* View Mode Switcher (PDF / Web) */
+.cv-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: 6px;
+  padding: 2px;
+}
+
+.cv-mode-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-snappy);
+}
+
+.cv-mode-btn:hover {
+  color: var(--text-main);
+}
+
+.cv-mode-btn.active {
+  background: var(--accent-subtle);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+/* Action Buttons */
+.btn-cv-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.42rem 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition-snappy);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.btn-cv-download {
+  background: var(--accent);
+  color: #090d16;
+  border-color: var(--accent);
+}
+
+.btn-cv-download:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-cv-external {
+  background: transparent;
+  color: var(--text-main);
+  border-color: var(--border-medium);
+}
+
+.btn-cv-external:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+  color: #fff;
+}
+
+.cv-modal-close-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.42rem 0.7rem;
+  border-radius: 6px;
+  transition: var(--transition-snappy);
+}
+
+.cv-modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #f87171;
+}
+
+/* Modal Body */
+.cv-modal-body {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #090d16;
+  overflow: hidden;
+}
+
+.cv-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* About section text download button */
+.btn-text-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  text-decoration: none;
+  padding: 0.65rem 0.85rem;
+  border-radius: 7px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  transition: var(--transition-snappy);
+}
+
+.btn-text-download:hover {
+  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-subtle);
+  transform: translateY(-1px);
+}
+
+/* Responsive CV Modal */
+@media (max-width: 768px) {
+  .cv-modal {
+    padding: 0.4rem;
+  }
+
+  .cv-modal-dialog {
+    max-width: 100%;
+    height: 96dvh;
+    border-radius: 10px;
+  }
+
+  .cv-modal-header {
+    padding: 0.6rem 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .cv-modal-badge {
+    display: none;
+  }
+
+  .cv-modal-title {
+    font-size: 0.8rem;
+  }
+
+  .btn-cv-action span {
+    display: none;
+  }
+
+  .btn-cv-action {
+    padding: 0.5rem;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .cv-mode-btn {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .cv-modal-close-btn span {
+    display: none;
+  }
+
+  .cv-modal-close-btn {
+    padding: 0.5rem;
+    min-width: 38px;
+    min-height: 38px;
+    justify-content: center;
+  }
 }
 
 /* ==========================================================================

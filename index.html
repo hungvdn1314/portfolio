@@ -52,10 +52,10 @@
           </button>
 
           <!-- Compact CV Button -->
-          <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn-cv-compact" title="Download CV">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          <button id="nav-cv-btn" class="btn-cv-compact" title="View &amp; Download CV" aria-label="View and Download CV" data-open-cv>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
             <span data-i18n="nav.cv">CV</span>
-          </a>
+          </button>
 
           <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -92,9 +92,9 @@
               <span data-i18n="hero.exploreWork">Explore Featured Work</span>
             </a>
 
-            <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              <span data-i18n="hero.downloadCv">Download CV</span>
+            <a href="assets/cv.pdf" id="hero-cv-btn" class="btn btn-outline" data-open-cv>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span data-i18n="hero.viewCv">View CV</span>
             </a>
 
             <a href="#contact" class="btn btn-accent">
@@ -649,10 +649,14 @@
               Whether it's untangling an obscure native memory crash or engineering a snappy client mechanic, I bring curiosity, fast iteration, and an appetite for hard problems.
             </p>
 
-            <div style="margin-top: 2rem;">
-              <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn btn-outline">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                <span data-i18n="nav.cv">Download CV</span>
+            <div class="about-cv-actions" style="margin-top: 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+              <a href="assets/cv.pdf" id="about-cv-btn" class="btn btn-outline" data-open-cv>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span data-i18n="about.viewCv">View CV</span>
+              </a>
+              <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn-text-download" title="Direct Download PDF">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span data-i18n="about.downloadCv">Download PDF (100 KB)</span>
               </a>
             </div>
           </div>
@@ -733,6 +737,58 @@
       <div class="video-frame-container">
         <iframe id="video-modal-iframe" src="" title="Puzzle Strike Combat RPG Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+  </div>
+
+  <!-- CV Viewer Modal -->
+  <div id="cv-modal" class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+    <div id="cv-modal-backdrop" class="cv-modal-backdrop"></div>
+    <div class="cv-modal-dialog">
+      
+      <!-- Modal Header Bar -->
+      <div class="cv-modal-header">
+        <div class="cv-modal-meta">
+          <div class="cv-modal-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <div class="cv-modal-titles">
+            <span id="cv-modal-title" class="cv-modal-title" data-i18n="cvModal.title">Curriculum Vitae // Vu Dinh Nghia Hung</span>
+            <span class="cv-modal-badge" data-i18n="cvModal.badge">A4 · 1 PAGE · AUG 2026</span>
+          </div>
+        </div>
+
+        <div class="cv-modal-actions">
+          <!-- View Mode Toggle (PDF vs Web View) -->
+          <div class="cv-mode-toggle" role="group" aria-label="Document format toggle">
+            <button id="cv-toggle-pdf" class="cv-mode-btn active" title="View PDF Document" data-i18n="cvModal.viewPdf">PDF</button>
+            <button id="cv-toggle-html" class="cv-mode-btn" title="View Responsive Web Document" data-i18n="cvModal.viewHtml">Web</button>
+          </div>
+
+          <!-- Download PDF Action -->
+          <a href="assets/cv.pdf" download="Vu_Dinh_Nghia_Hung_CV.pdf" class="btn-cv-action btn-cv-download" title="Download CV (PDF)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span data-i18n="cvModal.download">Download PDF</span>
+          </a>
+
+          <!-- Open in New Tab Action -->
+          <a href="assets/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn-cv-action btn-cv-external" title="Open PDF in new browser tab">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span data-i18n="cvModal.openTab">Open Tab</span>
+          </a>
+
+          <!-- Close Action -->
+          <button id="cv-modal-close" class="cv-modal-close-btn" aria-label="Close CV viewer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            <span data-i18n="cvModal.close">ESC</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body: Document Viewport -->
+      <div class="cv-modal-body">
+        <iframe id="cv-modal-iframe" src="" title="Vu Dinh Nghia Hung - Curriculum Vitae" class="cv-iframe"></iframe>
+      </div>
+
     </div>
   </div>
 

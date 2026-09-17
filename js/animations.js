@@ -148,12 +148,83 @@
     });
   }
 
+  // 5. CV Document Viewer Modal
+  function initCvModal() {
+    const modal = document.getElementById('cv-modal');
+    const modalIframe = document.getElementById('cv-modal-iframe');
+    const closeBtn = document.getElementById('cv-modal-close');
+    const backdrop = document.getElementById('cv-modal-backdrop');
+    const togglePdfBtn = document.getElementById('cv-toggle-pdf');
+    const toggleHtmlBtn = document.getElementById('cv-toggle-html');
+
+    if (!modal || !modalIframe) return;
+
+    const cvTriggers = document.querySelectorAll('[data-open-cv]');
+    let currentMode = 'pdf';
+
+    function setMode(mode) {
+      currentMode = mode;
+      if (mode === 'html') {
+        modalIframe.src = 'assets/cv.html';
+        if (toggleHtmlBtn) toggleHtmlBtn.classList.add('active');
+        if (togglePdfBtn) togglePdfBtn.classList.remove('active');
+      } else {
+        modalIframe.src = 'assets/cv.pdf#toolbar=1&view=FitH';
+        if (togglePdfBtn) togglePdfBtn.classList.add('active');
+        if (toggleHtmlBtn) toggleHtmlBtn.classList.remove('active');
+      }
+    }
+
+    function openModal(e) {
+      if (e) e.preventDefault();
+      // On mobile devices where inline PDF iframes often fail (e.g. Android Chrome), default to responsive Web view
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+      setMode(isMobile ? 'html' : 'pdf');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modalIframe.src = '';
+      document.body.style.overflow = '';
+    }
+
+    cvTriggers.forEach(trigger => {
+      trigger.addEventListener('click', openModal);
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    if (togglePdfBtn) {
+      togglePdfBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setMode('pdf');
+      });
+    }
+
+    if (toggleHtmlBtn) {
+      toggleHtmlBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        setMode('html');
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
   // Expose / Bootstrap
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initSpotlight();
     initScrollReveal();
     initVideoPlayer();
+    initCvModal();
 
     const themeToggleBtn = document.getElementById('theme-toggle-btn');
     if (themeToggleBtn) {

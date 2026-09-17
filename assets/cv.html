@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vu Dinh Nghia Hung - CV</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 11mm 8mm 11mm;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background: #fff;
+    line-height: 1.30;
+    font-size: 8.35pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @media screen {
+    html {
+      background: #090d16;
+    }
+    body {
+      background: #090d16;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+    .cv-page {
+      background: #ffffff;
+      width: 100%;
+      max-width: 820px;
+      padding: 32px 40px;
+      border-radius: 8px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.55);
+    }
+  }
+  @media screen and (max-width: 640px) {
+    body {
+      padding: 12px 8px;
+    }
+    .cv-page {
+      padding: 20px 14px;
+      border-radius: 6px;
+    }
+  }
+  @media print {
+    body {
+      background: #fff;
+    }
+    .cv-page {
+      padding: 0;
+      box-shadow: none;
+      border-radius: 0;
+      max-width: 100%;
+    }
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .name {
+    font-size: 16.5pt;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #0f172a;
+    text-transform: uppercase;
+  }
+  .title-bar {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: #0284c7;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    letter-spacing: 0.02em;
+  }
+  .contact-bar {
+    font-size: 7.7pt;
+    color: #475569;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .contact-bar a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  /* Section Styling */
+  .section {
+    margin-bottom: 5px;
+  }
+  .section-title {
+    font-size: 8.7pt;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 1.5px;
+    margin-bottom: 3.5px;
+  }
+
+  /* Professional Summary */
+  .summary-text {
+    font-size: 8.15pt;
+    color: #334155;
+    text-align: justify;
+    line-height: 1.32;
+  }
+
+  /* Skills Grid */
+  .skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.05pt;
+  }
+  .skills-table td {
+    padding: 1px 0;
+    vertical-align: top;
+  }
+  .skills-label {
+    width: 125px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .skills-val {
+    color: #334155;
+  }
+
+  /* Experience Items */
+  .job {
+    margin-bottom: 4.5px;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .job-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 8.5pt;
+  }
+  .job-company {
+    font-weight: 600;
+    color: #0284c7;
+  }
+  .job-date {
+    font-size: 7.7pt;
+    font-weight: 600;
+    color: #64748b;
+  }
+  .job-subhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.0pt;
+    font-style: italic;
+    color: #475569;
+    margin-bottom: 1.5px;
+  }
+  
+  ul.bullets {
+    padding-left: 14px;
+    margin-top: 1px;
+  }
+  ul.bullets li {
+    font-size: 8.0pt;
+    color: #334155;
+    margin-bottom: 1.2px;
+    line-height: 1.26;
+    text-align: justify;
+  }
+  ul.bullets li strong {
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  /* Education */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 8.2pt;
+  }
+  .edu-school {
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .edu-date {
+    font-size: 7.7pt;
+    font-weight: 600;
+    color: #64748b;
+  }
+  .edu-sub {
+    font-size: 7.95pt;
+    color: #475569;
+    margin-bottom: 1.5px;
+  }
+</style>
+</head>
+<body>
+<div class="cv-page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="name">Vu Dinh Nghia Hung</div>
+    <div class="title-bar">Game Client &amp; Infra Engineer · Open to Opportunities</div>
+    <div class="contact-bar">
+      <span>Da Nang, Vietnam (Open to Remote / Relocation)</span>
+      <span>•</span>
+      <span>0915 684 515</span>
+      <span>•</span>
+      <span><a href="mailto:dsc.hungvdn@gmail.com">dsc.hungvdn@gmail.com</a></span>
+      <span>•</span>
+      <span><a href="https://hungvdn1314.github.io/portfolio/">hungvdn1314.github.io/portfolio</a></span>
+      <span>•</span>
+      <span><a href="https://github.com/hungvdn1314">github.com/hungvdn1314</a></span>
+      <span>•</span>
+      <span><a href="https://www.linkedin.com/in/hungvdn/">linkedin.com/in/hungvdn</a></span>
+    </div>
+  </div>
+
+  <!-- Professional Summary -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">
+      Game client and infra engineer with 4+ years of production experience at Gear Games (Nov 2021 — Aug 2026), currently open to new roles. Quick to adapt to new tech stacks, energized by tough engineering challenges requiring full focus, and driven to build software that creates genuine impact. Experienced across player-facing gameplay systems (Unity 2D/3D, deterministic multiplayer in Photon Quantum, combat math, animation timelines) and production infrastructure (Splunk crash triage, native SDK stability across iOS/Android, and end-to-end internal developer tooling ownership).
+    </div>
+  </div>
+
+  <!-- Technical Stack Matrix -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+      <tr>
+        <td class="skills-label">Languages:</td>
+        <td class="skills-val">C# (Unity), C++ (Native Plugins), Python (Automation), Swift (macOS Tools), JavaScript / TypeScript, SQL</td>
+      </tr>
+      <tr>
+        <td class="skills-label">Game &amp; Systems:</td>
+        <td class="skills-val">Unity (2D/3D, UGUI, Timelines), Photon Quantum (Deterministic ECS Netcode), State Machines (FSM), Physics &amp; Collision, Combat Calculations</td>
+      </tr>
+      <tr>
+        <td class="skills-label">Infra &amp; Debugging:</td>
+        <td class="skills-val">Splunk (Crash Triage, Telemetry Queries), Native SDKs (Facebook, Firebase, IAP), Internal Tooling, Git &amp; CI/CD</td>
+      </tr>
+      <tr>
+        <td class="skills-label">Web &amp; Platforms:</td>
+        <td class="skills-val">React, Next.js, Vite, Tailwind CSS, iOS &amp; Android Native Platforms, macOS Environment, Embedded / IoT (Arduino C++)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Professional Experience -->
+  <div class="section">
+    <div class="section-title">Production Experience</div>
+
+    <!-- Job 1: Infra Engineer -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Infra Engineer <span style="font-weight: normal; color: #64748b;">· Gear Games</span></span>
+        <span class="job-date">Nov 2024 — Aug 2026</span>
+      </div>
+      <div class="job-subhead">
+        <span>Engine Infrastructure, Production Telemetry &amp; Internal Tooling Support</span>
+        <span>Da Nang, Vietnam</span>
+      </div>
+      <ul class="bullets">
+        <li><strong>Crash &amp; SDK Triage:</strong> Monitored live production logs in Splunk to catch error signatures; traced client code to isolate root causes and resolved native crashes across Facebook SDK, Firebase, and In-App Purchases (IAP).</li>
+        <li><strong>Internal Tooling Ownership:</strong> Took ownership of several internal tools supporting game projects—breaking down PRDs, authoring TDDs, implementing features, fixing bugs, and maintaining tools for the team.</li>
+        <li><strong>Desktop Automation:</strong> Built macOS utilities and scripts using Xcode, Swift, and Python for the Live Ops team to validate configs and automate release asset packaging.</li>
+        <li><strong>AI Workflows:</strong> Used AI tools for technical research, test planning, refactoring, and automated test generation.</li>
+      </ul>
+    </div>
+
+    <!-- Job 2: Custom Car Racing -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Client Engineer — Custom Car Racing 3D <span style="font-weight: normal; color: #64748b;">· Gear Games</span></span>
+        <span class="job-date">Mar 2024 — Nov 2024</span>
+      </div>
+      <ul class="bullets">
+        <li>Built an extensible vehicle customization timeline framework for modular 3D parts swapping (rims, spoilers, body kits, vinyls) and dynamic color grading.</li>
+        <li>Partnered with art and UI/UX teams to polish all UI views, tuning shaders and canvas layouts to minimize draw calls and optimize mobile GPU batching.</li>
+      </ul>
+    </div>
+
+    <!-- Job 3: Idle Combat -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Client Engineer — Idle Combat &amp; Obstacle Prototype <span style="font-weight: normal; color: #64748b;">· Gear Games</span></span>
+        <span class="job-date">Aug 2023 — Mar 2024</span>
+      </div>
+      <ul class="bullets">
+        <li>Programmed trigger volumes and physics interaction code for moving obstacle hazards and timed platforms.</li>
+        <li>Engineered character state machines (FSM) for auto-attack combat rotations, cooldown priorities, and arena obstacle avoidance.</li>
+        <li>Designed a modular equipment system with dynamic stat calculations, hit-stop camera VFX, and responsive mobile HUD layouts.</li>
+      </ul>
+    </div>
+
+    <!-- Job 4: Survival Prototype & Puzzle Strike -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Client Engineer — Survival Prototype &amp; Puzzle Strike <span style="font-weight: normal; color: #64748b;">· Gear Games</span></span>
+        <span class="job-date">Nov 2021 — Aug 2023</span>
+      </div>
+      <ul class="bullets">
+        <li><strong>Stage 1 (Survival Prototype):</strong> First project at Gear Games; supported the team by implementing smaller features and fixing bugs—handling weapon ballistics logic, coding character skills, and resolving data-related issues in Photon Quantum and Unity.</li>
+        <li><strong>Stage 2 (Puzzle Strike: Combat RPG Release):</strong> Collaborated within the client team to ship the commercial title; contributed to match-3 grid mechanics (swapping, gravity cascades, combos), turn combat math (elements, buffs, mana curves), 3D character animation timelines, and mobile UI.</li>
+      </ul>
+    </div>
+
+    <!-- Job 5: Intern -->
+    <div class="job">
+      <div class="job-header">
+        <span class="job-title">Client Engineer Intern <span style="font-weight: normal; color: #64748b;">· Gear Inc</span></span>
+        <span class="job-date">Apr 2021 — Nov 2021</span>
+      </div>
+      <ul class="bullets">
+        <li>Built a solo Final Fantasy-inspired 2D RPG as both University Graduation Thesis and 6-month internship capstone (combat math, tilemaps, 4 heroes, save/load data serialization), alongside recreating arcade classics (Flappy Bird, Gold Miner) to master Unity component lifecycles.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Education & Honors -->
+  <div class="section">
+    <div class="section-title">Education &amp; Key Achievements</div>
+    
+    <div class="edu-row">
+      <span class="edu-school">University of Greenwich Vietnam</span>
+      <span class="edu-date">2018 — 2022</span>
+    </div>
+    <div class="edu-sub">
+      <strong>Bachelor of Science in Computing</strong> · <em>Google Developer Student Club (DSC) Lead (Inaugural Vietnam Cohort)</em>
+    </div>
+    <div style="font-size: 7.9pt; color: #334155; margin-bottom: 3.5px;">
+      Selected by Google Developers as one of the first 9 DSC Leads in Vietnam. Represented the university at the Google DSC SEA Summit 2019 in Kuala Lumpur, Malaysia. Organized hands-on technical workshops and bootcamps in Flutter, Firebase, and cloud technologies.
+    </div>
+
+    <div class="edu-row">
+      <span class="edu-school">Le Quy Don High School for the Gifted</span>
+      <span class="edu-date">2015 — 2018</span>
+    </div>
+    <div class="edu-sub">
+      <strong>Specialized in Computer Science (Chuyên Tin)</strong> · <em>National Awards in Competitive Programming &amp; Science-Tech</em>
+    </div>
+    <div style="font-size: 7.9pt; color: #334155;">
+      Won National Awards at both the <strong>National Youth Informatics Contest (Tin Học Trẻ Toàn Quốc)</strong> and the <strong>National Science &amp; Technology Contest (KHKT Cấp Quốc Gia)</strong> for an embedded IoT early warning system, alongside multiple City awards in High School Informatics Olympiads.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

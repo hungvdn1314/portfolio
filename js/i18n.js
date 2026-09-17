@@ -25,6 +25,7 @@
         role: "GAME CLIENT & INFRA ENGINEER",
         summary: "Game client and engine infrastructure engineer with 4+ years of production experience at Gear Games (Nov 2021 — Aug 2026). Currently open to new opportunities. Quick to adapt to new tech stacks, energized by tough engineering challenges, and driven to build software that creates genuine impact.",
         exploreWork: "Explore Featured Work",
+        viewCv: "View CV",
         downloadCv: "Download CV",
         getInTouch: "Get in Touch",
         location: "Da Nang, Vietnam",
@@ -195,7 +196,18 @@
         lead: "I’m a game client and infrastructure engineer based in Da Nang, Vietnam. Over four years at Gear Games (Nov 2021 — Aug 2026), I worked across gameplay client systems and low-level engine infrastructure. Currently open to new opportunities (remote or on-site). I adapt quickly to new tech stacks, love diving into hard engineering problems that demand complete focus, and care deeply about building things that make a tangible difference.",
         p1: "My work has spanned the spectrum from player-facing features to backend stability. On the gameplay side, I've shipped match-3 mechanics, combat math, animation timelines, and mobile UI, alongside early prototypes in Photon Quantum. On the infrastructure side, I dig through Splunk logs to isolate crash signatures, patch native SDK issues across iOS and Android, and build internal tools from scratch that automate daily team workflows.",
         p2: "My technical path began with competitive programming at Le Quy Don High School for the Gifted, winning National Awards in both Tin Học Trẻ Toàn Quốc and KHKT Cấp Quốc Gia. Later at the University of Greenwich, I was selected as one of Vietnam's first 9 Google Developer Student Club (DSC) Leads, representing the community at the SEA Summit in Malaysia.",
-        p3: "Whether it's untangling an obscure native memory crash or engineering a snappy client mechanic, I bring curiosity, fast iteration, and an appetite for hard problems."
+        p3: "Whether it's untangling an obscure native memory crash or engineering a snappy client mechanic, I bring curiosity, fast iteration, and an appetite for hard problems.",
+        viewCv: "View CV",
+        downloadCv: "Download PDF (100 KB)"
+      },
+      cvModal: {
+        title: "Curriculum Vitae // Vu Dinh Nghia Hung",
+        badge: "A4 · 1 PAGE · AUG 2026",
+        download: "Download PDF",
+        openTab: "Open Tab",
+        viewPdf: "PDF",
+        viewHtml: "Web",
+        close: "ESC"
       },
       contact: {
         tag: "COMMUNICATION CHANNELS",
@@ -230,6 +242,7 @@
         role: "KỸ SƯ GAME CLIENT & HẠ TẦNG ENGINE",
         summary: "Kỹ sư game client và hạ tầng với hơn 4 năm kinh nghiệm tại Gear Games (11/2021 — 08/2026). Hiện đang sẵn sàng đón nhận các cơ hội công việc mới (Open to Work). Khả năng thích ứng nhanh với các công nghệ mới, đam mê chinh phục các bài toán kỹ thuật phức tạp đòi hỏi sự tập trung cao độ, và luôn hướng tới việc xây dựng sản phẩm mang lại giá trị thực tế.",
         exploreWork: "Khám Phá Dự Án",
+        viewCv: "Xem CV",
         downloadCv: "Tải CV PDF",
         getInTouch: "Kết Nối Ngay",
         location: "Đà Nẵng, Việt Nam",
@@ -397,7 +410,18 @@
         lead: "Mình là kỹ sư game client và hạ tầng tại Đà Nẵng, với hơn 4 năm kinh nghiệm tại Gear Games (11/2021 — 08/2026). Hiện tại mình đang sẵn sàng đón nhận các cơ hội nghề nghiệp mới (Open to Work - Remote / On-site). Mình có khả năng thích ứng nhanh với các công nghệ mới, hào hứng trước những bài toán kỹ thuật hóc búa đòi hỏi sự dồn sức cao độ, và luôn tâm huyết tạo ra những sản phẩm mang lại giá trị thực tế.",
         p1: "Tại Gear Games, công việc của mình trải rộng từ các tính năng phía người chơi đến độ ổn định hạ tầng. Về gameplay, mình tham gia phát triển logic bàn cờ match-3, toán combat, timeline chuyển động 3D và giao diện mobile, bên cạnh các nguyên mẫu multiplayer đồng bộ với Photon Quantum. Về hạ tầng, mình đào sâu log Splunk để khoanh vùng crash, vá lỗi native SDK trên iOS và Android, đồng thời tự phát triển các công cụ nội bộ tối ưu hóa quy trình làm việc của cả team.",
         p2: "Hành trình lập trình của mình khởi đầu từ lớp Chuyên Tin trường THPT Chuyên Lê Quý Đôn Đà Nẵng, đạt Giải Cấp Quốc Gia ở cả hai cuộc thi Tin Học Trẻ Toàn Quốc và KHKT Cấp Quốc Gia. Tại Đại học Greenwich, mình vinh dự là 1 trong 9 đại diện đầu tiên ở Việt Nam được Google Developers chọn làm Google DSC Lead, tham gia hội nghị cấp khu vực Đông Nam Á tại Malaysia.",
-        p3: "Dù là giải mã một lỗi crash bộ nhớ native bí ẩn hay xây dựng một cơ chế gameplay mượt mà, mình luôn làm việc với tinh thần học hỏi nhanh, đào sâu bản chất và không ngại các thử thách kỹ thuật khó khăn."
+        p3: "Dù là giải mã một lỗi crash bộ nhớ native bí ẩn hay xây dựng một cơ chế gameplay mượt mà, mình luôn làm việc với tinh thần học hỏi nhanh, đào sâu bản chất và không ngại các thử thách kỹ thuật khó khăn.",
+        viewCv: "Xem CV",
+        downloadCv: "Tải Bản PDF (100 KB)"
+      },
+      cvModal: {
+        title: "Hồ Sơ Năng Lực // Vũ Đình Nghĩa Hưng",
+        badge: "A4 · 1 TRANG · 08/2026",
+        download: "Tải Bản PDF",
+        openTab: "Mở Tab Mới",
+        viewPdf: "PDF",
+        viewHtml: "Web",
+        close: "ESC"
       },
       contact: {
         tag: "KÊNH KẾT NỐI",
