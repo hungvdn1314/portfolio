@@ -1,10 +1,40 @@
-# OS files
+# ==========================================
+# 1. OS & System Files
+# ==========================================
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
+desktop.ini
 
-# Node / Build files if added later
+# ==========================================
+# 2. Node / Build / Deployment
+# ==========================================
 node_modules/
-.vercel/
 dist/
-.agents/
+.vercel/
+*.log
 
+# ==========================================
+# 3. Environment & Secrets (NEVER COMMIT)
+# ==========================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+credentials.json
+
+# ==========================================
+# 4. Editor & AI Scratch
+# ==========================================
+.idea/
+.vscode/*
+!.vscode/settings.json
+scratch/
+temp/
+tmp/
+*.tmp
+.aiexclude
+.agents/scratch/
+.gemini/antigravity/brain/
