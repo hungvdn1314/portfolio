@@ -78,7 +78,11 @@
 
         p8Role: "Party Drinking Game (Web)",
         p8Title: "Velvet Vines",
-        p8Desc: "Responsive drinking and party game web app designed for mobile browsers with clean micro-animations and randomized challenge decks for social nights."
+        p8Desc: "Responsive drinking and party game web app designed for mobile browsers with clean micro-animations and randomized challenge decks for social nights.",
+
+        p9Role: "Solo Technical Demo (Built in 3 Days)",
+        p9Title: "Magic Tiles Rhythm Game Engine",
+        p9Desc: "A 4-lane mobile rhythm game engine built from scratch in Unity in 3 days as a technical demo. Features DSP-clock audio sync (sub-60ms precision), ScriptableObject-based song library with JSON beatmap parsing, object pooling for zero-GC tile spawning, particle & screen-shake juice systems, and a built-in Autoplay bot for automated timing regression tests."
       },
       experience: {
         tag: "CAREER TIMELINE",
@@ -293,6 +297,10 @@
         p8Role: "Game Tiệc Tùng / Drinking Game Web",
         p8Title: "Velvet Vines",
         p8Desc: "Ứng dụng web trò chơi tiệc tùng và drinking game dành cho điện thoại với chuyển động mượt mà và bộ thử thách ngẫu nhiên cho những buổi tụ tập bạn bè."
+
+        p9Role: "Demo Kỹ Thuật Cá Nhân (Hoàn thành trong 3 ngày)",
+        p9Title: "Magic Tiles Rhythm Game Engine",
+        p9Desc: "Engine rhythm game mobile 4 làn đường xây dựng từ đầu bằng Unity trong 3 ngày. Đồng bộ âm thanh qua DSP clock (chính xác dưới 60ms), thư viện bài hát dựa trên ScriptableObject với beatmap JSON, object pooling loại bỏ hoàn toàn GC spike, hệ thống particle và rung camera, cùng bot Autoplay tự động kiểm thử timing."
       },
       experience: {
         tag: "LỘ TRÌNH SỰ NGHIỆP",
